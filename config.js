@@ -23,10 +23,10 @@ global.APIs = { // API Prefix
 global.APIKeys = { // APIKey Bree Isi Di Sini
   // 'https://website': 'apikey':
   'https://api.lolhuman.xyz': 'yusuf01ch1b917cApi',
-  'https://api.xteam.xyz': 'HIRO', 
+  'https://api.xteam.xyz': 'FuzBot1', 
   'https://zahirr-web.herokuapp.com': 'zahirgans',
   'https://bsbt-api-rest.herokuapp.com': 'benniismael',
-  'https://api.zeks.xyz': 'apivinz',
+  'https://api.zeks.xyz': 'GABUTTTTT',
   'https://hardianto-chan.herokuapp.com': 'hardianto',
   'https://pencarikode.xyz': 'pais', 
   'https://leyscoders-api.herokuapp.com': 'DestaPrasApi' 
