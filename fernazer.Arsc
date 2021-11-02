@@ -23,7 +23,7 @@ global.timestamp = {
 const PORT = process.env.PORT || 3000
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎/!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
 if (!global.DATABASE.data.users) global.DATABASE.data = {
@@ -120,9 +120,9 @@ global.reloadHandler = function () {
     conn.off('group-participants-update', conn.onParticipantsUpdate)
     conn.off('CB:action,,call', conn.onCall)
   }
-  conn.welcome = 'Hai @user\n◪ Welcome in group:\n├─ @subject\n\n├─ Intro dulu\n├─ ❏ Nama: \n├─ ❏ Umur: \n├─ ❏ Asal kota: \n├─ ❏ Kelas: \n├─ ❏ Jenis kelamin: \nFOLLOW AKUN OWNER\n➣https://www.instagram.com/Fernazer/\n➣https://youtube.com/channel/UCB9T1d_LG16EHf350BZIIYw'
-  conn.spromote = '*[ HAYOLO KETAUAN ]*\n\n*@user Sekarang Jadi Admin*\n\n\n```Terdeteksi Di Promote```'           
-  conn.sdemote = '*[ HAYOLO KETAUAN ]*\n\n*@user Sekarang Bukan Admin*\n\n\n```Terdeteksi Di Demote```'
+  conn.welcome = 'Selamat Datang @user 👋\nDi Group @subject\n▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\nSilahkan isi Data Dibawah ini Untuk memperkelakan Diri 🌻\n▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n📌 Nama :\n📌 Umur :\n📌 Kelas :\n📌 Askot \n📌 Alasan Masuk Grup :\n▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\nSelamat Bergabung ke grup 🐾\nJangan lupa Patuhi Peraturan DiGroup\n▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n🍀 Deks Group\n@desc'
+  conn.spromote = '*[ ◇ DETECT ◇ ]*\n*@user Sekarang Jadi Admin*\n\n```Terdeteksi Di Promote```'           
+  conn.sdemote = '*[ ◇ DETECT ◇ ]*\n*@user Sekarang Bukan Admin*\n\n```Terdeteksi Di Demote```'
   conn.handler = handler.handler
   conn.onDelete = handler.delete
   conn.onParticipantsUpdate = handler.participantsUpdate

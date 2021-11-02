@@ -1,7 +1,7 @@
 {
-  "name": "SpyBot",
+  "name": "KannaBot",
   "version": "10.8.9",
-  "description": "Subscribe Channel Fernazer °~°",
+  "description": "Follow Ig Ppiowy_ °^°",
   "depecrated": false,
   "main": "fernazer.Arsc",
   "directories": {
@@ -23,16 +23,16 @@
     "Games-wabot",
     "wabot-aq"
   ],
-  "homepage": "https://github.com/Fernazer/games-wabot",
+  "homepage": "https://github.com/nurutomo/wabot-aq",
   "author": {
-    "name": "Fernazer"
+    "name": "KannaBot"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Fernazer/wabot-aq.git"
   },
   "bugs": {
-    "url": "https://github.com/Fernazer/games-wabot/issues"
+    "url": "https://github.com/nurutomo/wabot-aq/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
