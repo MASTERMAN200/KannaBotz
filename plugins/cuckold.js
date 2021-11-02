@@ -7,7 +7,10 @@ let handler = async (m, { conn, args }) => {
   conn.sendFile(m.chat, res, 'cuckold.jpg', `wangy wangy wangy`, m, false)
 }
 handler.help = ['cuckold'].map(v => v + ' ')
-handler.tags = ['dewasa']
+handler.tags = ['dewasa','premium']
+
+handler.premium = true
+handler.privite = true
 
 handler.command = /^(cuckold)$/i
 

@@ -1,67 +1,67 @@
 let handler = async (m, { conn }) =>
 conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": "HALO KAK\nSaya SPY BOT\nPilih Menu Di Bawah Yaa\n\n\nJoin Group WhatsApp\nhttps://chat.whatsapp.com/GGzB0VFvH7KLT7WQZ7WrMY\n\nSubscribe Me\nYUSUFZ CHANNEL",
-                        "description": "*©SPYBOT By YusufRmdn*",
-                        "buttonText": "PILIH SALAH SATU BRE",
+                        "title": "🌟 hy !\nSaya KannaBotz\n⤷ Pilih Menu Di Bawah Yaa\n\n\n🪀 Join Group WhatsApp\nhttps://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT\n\n🎮 • Join Discord\nhttps://discord.gg/WEJQjugTY7",
+                        "description": "καɴɴα вσтᴢ ᵒᶠᶜ-",
+                        "buttonText": "Click Here",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                              "rows": [
                                     {
-                                        "title": `Download Menu`,
-                                        "description": "\nI Want To Use Download Menu",
+                                        "title": `⤷ Download Menu 📲↵♯❜`,
+                                        "description": "\n[📲] Downloader Menu",
                                         "rowId": ".downloadmenu"
                                     },{
-                                        "title": "Database Menu",
-                                        "description": "\nI Want To Use Database Menu",
+                                        "title": "⤷ Database Menu 📂↵♯❜",
+                                        "description": "\n[📂] Database Menu",
                                         "rowId": ".dbmenu"                 
                                     },{
-                                        "title": "Button Menu",
-                                        "description": "\nI Want To Use Button Menu",
+                                        "title": "⤷ Button Menu 🔴↵♯❜",
+                                        "description": "\n[🔴] Button Menu",
                                         "rowId": ".button"                 
                                     },{
-                                    	"title": "All Menu",
-                                        "description": "\nI Want To Use All Menu",
+                                	"title": "⤷ All Menu 🔖↵♯❜",
+                                        "description": "\n[🔖] Allmenu",
                                         "rowId": ".allmenu"                 
                                     },{
-                                        "title": "Jadibot Menu",
-                                        "description": "\nI Want To Use Jadibot Menu",
+                                        "title": "⤷ Jadibot Menu 🤖↵♯❜",
+                                        "description": "\n[🤖] Jadibot Menu",
                                         "rowId": ".jadibotmenu"                 
                                     },{
-                                        "title": "Owner Menu",
-                                        "description": "\nI Want To Use Owner Menu",
+                                        "title": "⤷ Owner Menu 🪀↵♯❜",
+                                        "description": "\n[🪀] Owner Menu",
                                         "rowId": ".ownermenu"                 
                                     },{
-                                        "title": "Hentai Menu",
-                                        "description": "\nI Want To Use Hentai Menu",
+                                        "title": "⤷ Hentai Menu 🔞↵♯❜",
+                                        "description": "\n[🔞] Hentai Menu",
                                         "rowId": ".hentaimenu"                 
                                     },{
-                                        "title": "Absen Menu",
-                                        "description": "\nI Want To Use Absen Menu",
+                                        "title": "⤷ Absen Menu 📚↵♯❜",
+                                        "description": "\n[📚] Absen Menu",
                                         "rowId": ".absenmenu"                 
                                     }, {
-                                        "title": " Group Setting",
-                                        "description": "\nI Want To User Group Setting",
+                                        "title": "⤷ Group Setting 📢↵♯❜",
+                                        "description": "\n[📢] Group Settings",
                                         "rowId": ".groupset"
                                     }, {    
-                                        "title": "Primbon Menu",
-                                        "description": "\nI Want To Use Peimbon Menu",
+                                        "title": "⤷ Primbon Menu 🔮↵♯❜",
+                                        "description": "\n[🔮] Primbon Menu",
                                         "rowId": ".primbonmenu"
                                         
                                     }, {       
-                                        "title": "Dewasa Menu",
-                                        "description": "\nI Want To Use Dewasa Menu",
+                                        "title": "⤷ 18+ Menu 🔞↵♯❜",
+                                        "description": "\n[🔞] 18+ Menu",
                                         "rowId": ".dewasamenu"
                                         
                                    }, {        
-                                        "title": "Edukasi Menu",
-                                        "description": "\nI Want To Use Edukasi",
+                                        "title": "⤷ Edukasi Menu 🏫↵♯❜",
+                                        "description": "\n[🏫] Education Menu",
                                         "rowId": ".educationmenu"
                                         
                                    }, {             
-                                        "title": "Editod Menu",
-                                        "description": "\nI Want To Use Editor Menu",
+                                        "title": "⤷ Edit Menu 🎬↵♯❜",
+                                        "description": "\n[🎬] Editz Menu",
                                         "rowId": ".editormenu"
                                     }
                                 ]
@@ -72,6 +72,6 @@ conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
 }
                     }
                  }, {}), {waitForAck: true})
-handler.command = ['apaluwahyukan','wey']
+handler.command = ['simplemenu', 'listmenu']
 handler.register = true
 module.exports = handler

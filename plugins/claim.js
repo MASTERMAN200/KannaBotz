@@ -11,14 +11,24 @@ let handler = async (m, { conn }) => {
         global.DATABASE._data.users[m.sender].potion += 1
         global.DATABASE._data.users[m.sender].lastclaim = new Date * 1
     } else {
-        let buttons = button(`Silahkan Menunggu *🕒${timers}* Lagi Untuk Bisa Claim Lagi`, user)
+        let buttons = button(`silahkan tunggu *🕒${timers}* lagi untuk bisa mengclaim lagi`, user)
         conn.sendMessage(m.chat, buttons, MessageType.buttonsMessage, { quoted: m })
     }
 }
-handler.help = ['claim'] 
-handler.command = /^(claim)$/i
+handler.help = ['claim']
+handler.tags = ['rpg']
+handler.command = /^(claim|daily)$/i
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
 
 handler.fail = null
+handler.money = 0
 
 module.exports = handler
 
@@ -41,14 +51,14 @@ function button(teks, user) {
     let weekly = new Date - user.lastweekly > 604800000
     console.log({claim, monthly, weekly})
     
-    if (monthly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: 'monthly'}, type: 1})
-    if (weekly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: 'weekly'}, type: 1})
-    if (claim) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: 'claim'}, type: 1})
+    if (monthly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/monthly'}, type: 1})
+    if (weekly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/weekly'}, type: 1})
+    if (claim) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/claim'}, type: 1})
     if (buttons.length == 0) throw teks
     
     const buttonMessage = {
         contentText: teks,
-        footerText: '©RakuChan',
+        footerText: '🎮 Games KannaBot',
         buttons: buttons,
         headerType: 1
     }

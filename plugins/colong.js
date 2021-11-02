@@ -9,8 +9,8 @@ try {
     if (/image|video/.test(mime)) {
       let img = await q.download()
       if (!img) throw 'Reply stiker nya!'
-      stiker = await sticker(img, false, 'Punya Caliph', require('awesome-phonenumber')('+6281215199447'). getNumber('international'))
-    } else if (args[0]) stiker = await sticker(false, args[0], 'Punya Caliph', require('awesome-phonenumber')('+6281215199447'). getNumber('international'))
+      stiker = await sticker(img, false, '🍀 • Sticker By :\n⤷ καɴɴαвσтᴢ ɞ \n\n🔖 • By :\n⤷ίℓʋɭų ǫғғιcιαℓ', require('awesome-phonenumber')('🇯🇵 • Number Bot :\n⤷ wa.me/6283143393763\n\n🎮 • Discord :\n⤷ https://discord.gg/WEJQjugTY7'). getNumber('international'))
+    } else if (args[0]) stiker = await sticker(false, args[0], '🍀 • Sticker By :\n⤷ καɴɴαвσтᴢ ɞ \n\n🔖 • By :\n⤷ίℓʋɭų ǫғғιcιαℓ', require('awesome-phonenumber')('🇯🇵 • Number Bot :\n⤷ wa.me/6283143393763\n\n🎮 • Discord :\n⤷ https://discord.gg/WEJQjugTY7'). getNumber('international'))
   } finally {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
       quoted: m
