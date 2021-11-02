@@ -1,7 +1,8 @@
 let handler = async m => m.reply(`
-*⚠GRUP BOT⚠*
-
-1. https://chat.whatsapp.com/CAKETl3LJdELqHTqOJtH4S
+╭ *◇ Group Official ◇*
+├╯🍀 Group 1 :
+https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT
+╰╮ © KannaBot
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['gcbot']
 handler.tags = ['info']

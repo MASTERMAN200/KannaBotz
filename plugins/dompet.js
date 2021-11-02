@@ -8,23 +8,25 @@ let handler = async (m, { conn }) => {
 
   } finally {
     let about = (await conn.getStatus(who).catch(console.error) || {}).status || ''
-    let { name, limit, exp, lastclaim, registered, regTime, age, money, healt, role } = global.DATABASE.data.users[m.sender]
+    let { name, level, premium, limit, exp, lastclaim, registered, regTime, age, money, healt, role } = global.DATABASE.data.users[m.sender]
     let username = conn.getName(who)
     let str = `
- *DOMPET* 
+⤷🔖 *✧ INFO ◈* 
     
-*Username:* ${username}
-*Money:* Rp.${money}
-*Xp:* ${exp}
-*Limit:* ${limit}
-*Health:* ${healt}
-*Role:* ${role}
+*📇 Username:* ${username}
+*🌟 Premium:* ${premium ? 'Yes': 'No'}
+*❤️ Health:* ${healt}
+*💹 Money:* Rp.${money}
+*✨ Xp:* ${exp}
+*🎫 Limit:* ${limit}
+*📊 Level:* ${level}
+*📍 Role:* ${role}
 `.trim()
     let mentionedJid = [who]
     m.reply(str)
   }
 }
-handler.help = ['dompet','bank']
+handler.help = ['bank']
 handler.tags = ['xp']
-handler.command = /^dompet|bank$/i
+handler.command = /^bank$/i
 module.exports = handler

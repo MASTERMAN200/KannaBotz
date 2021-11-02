@@ -17,40 +17,48 @@ let handler = async (m, { conn, usedPrefix }) => {
     let str = `
 ┏━━°❀❬ *USER PROFILE* ❭❀°━━┓
 ┃
-┃•  *Nama :* ${username}
-┃•  *Umur :* ${registered ? '' + age : ''}
-┃•  *Exp :* ${exp}
-┃•  *Limit :* ${limit}
-┃•  *Level :* ${level}
+┃•  *📇 Nama :* ${username}
+┃•  *🏷️Umur :* ${registered ? '' + age : ''}
+┃•  *✨ Exp :* ${exp}
+┃•  *🎫 Limit :* ${limit}
+┃•  *📊 Level :* ${level}
 ┃
-┣━━°❀❬ *DEWASA MENU* ❭❀°━━┓
+┣━━°❀❬ *NSFW PREMIUM* ❭❀°━━┓
 ┃
 ┣➥ *${usedPrefix}bokep*
-┣➥ *${usedPrefix}ahegao*
 ┣➥ *${usedPrefix}ass*
 ┣➥ *${usedPrefix}bdsm*
 ┣➥ *${usedPrefix}blowjob*
-┣➥ *${usedPrefix}cersex*
 ┣➥ *${usedPrefix}cuckold*
 ┣➥ *${usedPrefix}ero*
 ┣➥ *${usedPrefix}gifhentai*
-┣➥ *${usedPrefix}glasses*
 ┣➥ *${usedPrefix}hentai*
 ┣➥ *${usedPrefix}jahy*
-┣➥ *${usedPrefix}kodenuklir*
 ┣➥ *${usedPrefix}manga*
 ┣➥ *${usedPrefix}mstrb*
 ┣➥ *${usedPrefix}nhentai*
-┣➥ *${usedPrefix}nsfwneko*
 ┣➥ *${usedPrefix}orgy*
-┣➥ *${usedPrefix}pantis*
 ┣➥ *${usedPrefix}porno*
 ┣➥ *${usedPrefix}pussy*
+┣➥ *${usedPrefix}ecchi*
+┣➥ *${usedPrefix}yuri*
+┣➥ *${usedPrefix}nsfwwaifu*
+┃ 
+┣━━°❀❬ *NSFW FREE* ❭❀°━━┓
+┃.
+┣➥ *${usedPrefix}nsfwneko*
+┣➥ *${usedPrefix}manga*
 ┣➥ *${usedPrefix}tentacles*
 ┣➥ *${usedPrefix}thighs*
 ┣➥ *${usedPrefix}uniform*
 ┣➥ *${usedPrefix}zttairyoiki*
-┃ 
+┣➥ *${usedPrefix}kodenuklir*
+┣➥ *${usedPrefix}glasses*
+┣➥ *${usedPrefix}cersex*
+┣➥ *${usedPrefix}nhpdf*
+┣➥ *${usedPrefix}panties*
+┣➥ *${usedPrefix}ahegao*
+┃.
 ┣━━°❀❬ *TQTO* ❭❀°━━┓
 ┃ 
 ┣➥ *Nurotomo (author)*
@@ -69,7 +77,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 }
 handler.help = ['dewasamenu']
 handler.tags = ['hsah']
-handler.command = /^(dewasamenu)$/i
+handler.command = /^(dewasamenu|nsfwmenu)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false

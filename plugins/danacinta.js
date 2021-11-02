@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Masukan Nomor Telepon yang akan dispam OTP DanaCinta', m)
 
-	axios.get(`https://api.xteam.xyz/spammer/danacita?no=${text}&APIKEY=MIMINETBOT`).then ((res) => {
+	axios.get(`https://api.xteam.xyz/spammer/danacita?no=${text}&APIKEY=kurrxd09`).then ((res) => {
 	 	let hasil = `${res.data.result}`
 
     conn.reply(m.chat, hasil, m)

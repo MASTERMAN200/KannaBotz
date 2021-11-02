@@ -8,4 +8,5 @@ module.exports = Object.assign(async function handler(m, { text }) {
     help: ['cmd'].map(v => 'del' + v + ' <text>'),
     tags: ['database'],
     command: ['delcmd']
+    premium: true
 })

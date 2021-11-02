@@ -1,13 +1,13 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let event = `
-┏━°❀❬ *EVENT MINGGUAN * ❭❀°━┓
+┏━°❀❬ *EVENT* ❭❀°━┓
 ┃
-┃> Tidak ada Event Minggu ini!
+┃> Tunggu Event Berikutnya !!
 ┃
 ┗━━━━━━━━━━━━━━━━
 `.trim()
 
-  conn.fakeReply(m.chat, event, '6281111111111@s.whatsapp.net', '*Eventnya Udahan :(*')
+  conn.fakeReply(m.chat, event, '0@s.whatsapp.net', '*🔎 EVENT NOT FOUND !*')
 }
 handler.help = ['event']
 handler.tags = ['hadiah']
