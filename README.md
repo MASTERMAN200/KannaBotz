@@ -1,4 +1,4 @@
-# Fernazer/games-wabot
+# KannaChann / KannaBotz
 <a href="https://github.com/Fernazer/games-wabot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Fernazer/games-wabot?label=Forks&color=blue&style=flat-square"></a>
 <a href="https://github.com/Fernazer/games-wabot/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/Fernazer/games-wabot?label=Watchers&color=green&style=flat-square"></a>
 <a href="https://github.com/Fernazer/games-wabot/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/Fernazer/games-wabot?label=Stars&color=yellow&style=flat-square"></a>
@@ -10,10 +10,10 @@
 
 ## ```Deploy```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yusu0/apasihkonnnndj/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kannachann/KannaBotz)
 
 ## Join Group Bot
-[`Group Whatsapp`](https://chat.whatsapp.com/Lb4Emjih98rBiCZiZoS2eM)
+[`Group Whatsapp`](https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT)
 ### FOR TERMUX USER
 ```bash
 > pkg update && pkg upgrade
@@ -21,8 +21,8 @@
 > pkg install nodejs -y
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
-> git clone https://github.com/Fernazer/bakabo
-> cd bakabo
+> git clone https://github.com/Kannachann/KannaBotz
+> cd KannaBotz
 > npm install
 ```
 ###### Run
@@ -38,8 +38,8 @@
 * Download And Install FFMPEG [`Click Here`](https://ffmpeg.org/download.html) (don't forget to path) 
 * Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php) (if nulis want work,  checklist columns 1,2,3,5,6) 
 ```bash
-> git clone https://github.com/Fernazer/bakabo
-> cd bakabo
+> git clone https://github.com/Kannachann/KannaBotz
+> cd KannaBotz
 > npm install
 ```
 ###### Run
