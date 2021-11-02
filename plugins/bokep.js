@@ -7,12 +7,12 @@ let handler = async (m, { conn, args }) => {
   conn.sendFile(m.chat, res, 'bokep.jpg', m, false)
 }
 handler.help = ['bokep'].map(v => v + ' ')
-handler.tags = ['dewasa']
+handler.tags = ['dewasa','premium']
 
 handler.command = /^(bokep)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 

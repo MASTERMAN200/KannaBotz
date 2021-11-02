@@ -12,7 +12,7 @@ handler.tags = ['dewasa']
 handler.command = /^(bdsm)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = true
 

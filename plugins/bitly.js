@@ -2,7 +2,7 @@ let axios = require("axios");
 let handler = async(m, { conn, text }) => { 
 
   await m.reply('*[❗] WAIT, Tunggu Sebentar*') 
-      axios.get(`https://api.xteam.xyz/shorturl/bitly?url=https://github.com/Bintang73&APIKEY=MIMINETBOT`)
+      axios.get(`https://api.xteam.xyz/shorturl/bitly?url=https://github.com/Bintang73&APIKEY=kurrxd09`)
     let hasil = `ShortLink Telah Selesai :\n\n${res.data.result}`
           
     conn.sendMessage(id, hasil ,MessageType.text)

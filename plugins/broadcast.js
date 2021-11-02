@@ -1,9 +1,8 @@
 let handler  = async (m, { conn, text }) => {
-  let chats = conn.chats.all().filter(v => !v.read_only && v.message && !v.archive).map(v => v.jid)
-  let cc = conn.serializeM(text ? m : m.quoted ? await m.getQuotedObj() : false || m)
-  let teks = text ? text : cc.text
-  let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 *ALL CHAT BROADCAST* 」')
-  for (let id of chats) conn.copyNForward(id, content, true)
+  let chats = conn.chats.all().filter(v => !v.read_only && v.message).map(v => v.jid)
+  let content = (/bc|broadcast/i.test(text) ? text : text + '\n' + readMore + '「  ' + conn.getName(conn.user.jid) + ' Broadcast 」 ')         for (let id of chats) conn.sendMessage(id, content, m.mtype, m.msg.contextInfo ? {
+    contextInfo: m.msg.contextInfo
+  } : {})
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${chats.length} chat_`, m)
 }
 handler.help = ['broadcast','bc'].map(v => v + ' <teks>')
