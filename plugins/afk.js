@@ -2,12 +2,11 @@ let handler = (m, { text }) => {
   let user = global.DATABASE.data.users[m.sender]
   user.afk = + new Date
   user.afkReason = text
-  m.reply(`
-*「 AFK MODE 」*
-
-${conn.getName(m.sender)} Sekarang sedang AFK!
-
-Alasan : ${text ? '' + text : ''}
+  m.reply(`╭ *◇ AFK MODE ◇* ╮
+├╯ *NOW AFK !*
+├🔖 Name : ${conn.getName(m.sender)}
+├🔖 Alasan : ${text ? '' + text : ''}
+╰╮ © KannaBot 
 `)
 }
 handler.help = ['afk <alasan>']

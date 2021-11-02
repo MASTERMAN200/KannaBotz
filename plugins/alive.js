@@ -25,9 +25,9 @@ let handler  = async (m, { conn }) => {
 ❏ *Host Number* : @${global.conn.user.jid.split('@')[0]}
 ❏ *Bio Bot* : ${ppstatus.status}\n\n*Support/Follow Me*\nhttps://instagram.com/caliph91_`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/error.png'), contextInfo: { mentionedJid: [global.conn.user.jid]}})
 }
-handler.help = ['info', 'alive']
+handler.help = ['alive']
 handler.tags = ['main']
-handler.command = /^(alive|info)$/i
+handler.command = /^(alive)$/i
 handler.fail = null
 
 module.exports = handler

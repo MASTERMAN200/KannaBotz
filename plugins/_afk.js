@@ -2,9 +2,11 @@ let handler = m => m
 handler.before = m => {
   let user = global.DATABASE.data.users[m.sender]
   if (user.afk > -1) {
-    m.reply(`
-Kamu berhenti AFK${user.afkReason ? ' setelah ' + user.afkReason : ''}
-Selama ${clockString(new Date - user.afk)}
+    m.reply(`╭ *◇ AFK ◇* ╮
+├╯ *BERHENTI AFK !*
+├🔖 ${user.afkReason ? ' Setelah ' + user.afkReason : ''}
+├🔖 Time : ${clockString(new Date - user.afk)}
+╰╮ © KannaBot
 `.trim())
     user.afk = -1
     user.afkReason = ''
@@ -16,10 +18,11 @@ Selama ${clockString(new Date - user.afk)}
     let afkTime = user.afk
     if (!afkTime || afkTime < 0) continue
     let reason = user.afkReason || ''
-    m.reply(`
-Jangan tag dia!
-Dia sedang AFK ${reason ? 'dengan alasan ' + reason : 'tanpa alasan'}
-Selama ${clockString(new Date - afkTime)}
+    m.reply(`╭ *◇ AFK MODE ◇* ╮
+├╯📢 Jangan tag dia! Dia sedang AFK !
+├🔖 ${reason ? 'Dengan Alasan ' + reason : 'Tanpa Alasan'}
+├🔖 Time : ${clockString(new Date - afkTime)}
+╰╮ © KannaBot
 `.trim())
   }
   return true

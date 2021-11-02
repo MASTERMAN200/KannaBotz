@@ -5,11 +5,11 @@ let handler = async (m, { conn }) => {
     let timers = clockString(_timers) 
     let user = global.DATABASE.data.users[m.sender]
     let buttons = [
-{buttonId: 'id1', buttonText: {displayText: 'kolam'}, type: 1}, 
+{buttonId: 'id1', buttonText: {displayText: 'Kolam 🏝️'}, type: 1}, 
 ]
 const buttonMessage = {
-    contentText: `\n*Sepertinya Lu Sudah Kecapekan Bree*\n*Silahkan Istirahat Dulu Ngopi sekitar ${timers}*\n*Untuk bisa melanjutkan Memancing*\n`,
-    footerText: 'SUBREK FERNAZER', 
+    contentText: `\n*📍 Sepertinya Kakak Sudah ke Capean*\n*Silahkan Istirahat Dulu Sekitar ${timers} 🕑*\n*Untuk bisa melanjutkan Memancing*\n`,
+    footerText: '©KannaBot', 
     buttons: buttons,
     headerType: 1
 }
@@ -55,7 +55,7 @@ zero11 = `${rbrb11}`
 zero12 = `${rbrb12}`
 
 hsl = `
-*《 Hasil Memancing Kali Ini 》*
+*⤷🌊 Hasil Memancing Kali Ini ↵♯❜*
 
  *🦀 = [ ${zero1} ]*			*🐠 = [ ${zero7} ]*
  *🦞 = [ ${zero2} ]*			 *🐟 = [ ${zero8} ]*
@@ -64,8 +64,7 @@ hsl = `
  *🐙 = [ ${zero5} ]*			 *🦈 = [ ${zero11} ]*
  *🐡 = [ ${zero6} ]*			*🐋 = [${zero12} ]*
 
- *©BY ZEROBOT*
- *©FERNAZER*
+ *©KannaBot*
 `
 global.DATABASE.data.users[m.sender].paus += rbrb1
 global.DATABASE.data.users[m.sender].kepiting += rbrb2
@@ -89,11 +88,11 @@ setTimeout(() => {
                       }, 18000)
                     
                      setTimeout(() => {
-                     m.reply('Strike Bree Mantap')
+                     m.reply('Strike !')
                      }, 15000) 
                     
                      setTimeout(() => {
-                     m.reply('Ikan Nya Gede Bre Kayaknya')
+                     m.reply('IkanNya Gede Nih...')
                      }, 14000) 
                      
                      setTimeout(() => {
@@ -102,9 +101,9 @@ setTimeout(() => {
   user.as = new Date * 1
     } else conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage ,m )
 }
-handler.help = ['mancing']
+handler.help = ['']
 handler.tags = ['rpg']
-handler.command = /^(mancing)$/i
+handler.command = /^(mkfnwimapfpw)$/i
 handler.register = true
 
 module.exports = handler

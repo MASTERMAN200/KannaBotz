@@ -12,13 +12,15 @@ handler.before = function (m, { isOwner, isBotAdmin }) {
 
     if (!chat.antiBadword && !chat.isBanned && isBadword) {
         user.warning += 1
-        this.send2Button(m.chat, `*Badword terdeteksi!*
-Warning: ${user.warning} / 5
-Jika warning mencapai 5 kamu akan dibanned
-`, '© SpyBot', 'Matikan Antibadword', '.disable antitoxic', 'Maaf Bro:)', '.maaf')
-        if (user.warning >= 5) {
+        this.send2Button(m.chat, `*「Anti Badword」*\n
+🔥 *Dosa* : ${user.warning} / 50
+
+“Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim).
+"Whoever believes in God and the Last Day then let him say good or be silent" (HR. al-Bukhari and Muslim).
+`, '©KannaBot', 'Matikan Antibadword', '.disable antibadword', 'Astagfirllah', '.maaf')
+        if (user.warning >= 50) {
             user.banned = true
-         m.reply(`AWOKAWOK MAMPUS GUA BANNED`)
+         m.reply(`Awokawok masuk Neraka 🗿`)
        }
     }
     return !0

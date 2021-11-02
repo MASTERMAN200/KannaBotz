@@ -9,17 +9,17 @@ handler.all = async function (m, { isBlocked }) {
     let chat = DATABASE.data.chat
     let { isBanned } = DATABASE.data.chats[m.chat]
     let { banned } = DATABASE.data.users[m.sender]
-
+    
     // ketika ditag
     try {
         if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
             await this.send2Button(m.chat,
-                isBanned ? 'SpyBot tidak aktif' : banned ? 'kamu dibanned' : 'SpyBot Disini Knpa Tag Saya Kak?',
-                '© SpyBot',
-                isBanned ? 'UNBAN' : banned ? 'PEMILIK BOT' : 'MENU',
-                isBanned ? '.unban' : banned ? '.owner' : '.?',
-                m.isGroup ? 'BAN' : isBanned ? 'UNBAN' : 'DONASI',
-                m.isGroup ? '.ban' : isBanned ? '.unban' : '.donasi')
+                isBanned ? 'KannaBotz tidak aktif' : banned ? 'kamu dibanned' : 'A,ada apa kakk ? (＾▽＾)',
+                'K a n n a  B o t z',
+                isBanned ? '🔓 • UNBAN ༅' : banned ? '🎋 • Owner' : '彡 MENU',
+                isBanned ? '.unban' : banned ? '.owner' : '.mainbutton',
+                m.isGroup ? '🍀 • Donasi' : isBanned ? '🔓 • UNBAN' : '🍀 • DONASI',
+                m.isGroup ? '.donasi' : isBanned ? '.unban' : '.donasi')
         }
     } catch (e) {
         return
@@ -27,15 +27,16 @@ handler.all = async function (m, { isBlocked }) {
 
     // ketika ada yang invite/kirim link grup di chat pribadi
     if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        this.sendButton(m.chat, `┌〔 Undang Bot ke Grup 〕
-├ 7 Hari / Rp 5,000
-├ 30 Hari / Rp 10,000
-└────
-
-Bayar Klo Mau Nyulik Bot Enak Aja Lu Wkwk
-
-https://github.com/yusu0
-`.trim(), '© SpyBot', 'PEMILIK BOT', '.owner', { contextInfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })
+        this.sendButton(m.chat, `╭› *◇ Undang Bot ke Grup ◇*
+├ 7 Hari / Rp 1,000
+├ 14 Hari / Rp 5,000
+├ 30 Hari / Rp 10.000
+╰╮
+››├🍀 Atau Masuk group KannaBotz Offiial
+╭╯
+├https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT
+╰╮
+`.trim(), '© καɴɴα вσтᴢ', '✨ Owner ✨', '.owner', { contextInfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })
     }
 
     // salam

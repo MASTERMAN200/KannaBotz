@@ -5,11 +5,11 @@ let handler = async (m, { conn }) => {
     let timers = clockString(_timers) 
     let user = global.DATABASE.data.users[m.sender]
     let buttons = [
-{buttonId: 'id1', buttonText: {displayText: 'kandang'}, type: 1}, 
+{buttonId: 'id1', buttonText: {displayText: 'Kandang 🐾'}, type: 1}, 
 ]
 const buttonMessage = {
-    contentText: `\n*Sepertinya Anda Sudah Kecapekan*\n*Silahkan Istirahat dulu sekitar ${timers}*\n*Untuk bisa melanjutkan berburu*\n`,
-    footerText: 'PESAN SpyBot', 
+    contentText: `*📍 Sepertinya Kakak Sudah Kecapekan*\n*Silahkan Istirahat dulu sekitar ${timers} 🕑*\n*Untuk bisa melanjutkan berburu*\n`,
+    footerText: '©KannaBot', 
     buttons: buttons,
     headerType: 1
 }
@@ -55,7 +55,7 @@ zero11 = `${rbrb11}`
 zero12 = `${rbrb12}`
 
 hsl = `
-*《 Hasil Berburu Kali Ini 》*
+*⤷ Hasil Berburu Kali Ini 🐾↵♯❜*
 
  *🐂 = [ ${zero1} ]*			*🐃 = [ ${zero7} ]*
  *🐅 = [ ${zero2} ]*			 *🐮 = [ ${zero8} ]*
@@ -64,9 +64,7 @@ hsl = `
  *🐼 = [ ${zero5} ]*			 *🐖 = [ ${zero11} ]*
  *🐊= [ ${zero6} ]*			*🐓 = [${zero12} ]*
 
- *©BY SpyBot*
- *©YusufRmdn*
-
+ *©KannaBot*
 `
 global.DATABASE.data.users[m.sender].banteng += rbrb1
 global.DATABASE.data.users[m.sender].harimau += rbrb2
@@ -103,9 +101,9 @@ setTimeout(() => {
   user.as = new Date * 1
     } else conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage ,m )
 }
-handler.help = ['berburu']
+handler.help = ['']
 handler.tags = ['rpg']
-handler.command = /^(berburu)$/i
+handler.command = /^(skaneidnqincowmpc)$/i
 handler.register = true
 
 module.exports = handler

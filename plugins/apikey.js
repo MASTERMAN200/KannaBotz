@@ -34,7 +34,7 @@ let handler = async m => m.reply(`
 `.trim()) // Tambah sendiri kalo mau
 handler.help = ['.apikey']
 handler.tags = ['info']
-handler.command = ['.apikey']
+handler.command = ['apikey']
 handler.rowner = true
 handler.mods = false
 handler.premium = false

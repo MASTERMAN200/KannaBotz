@@ -5,11 +5,11 @@ let handler = async (m, { conn }) => {
     let timers = clockString(_timers) 
     let user = global.DATABASE.data.users[m.sender]
     let buttons = [
-{buttonId: 'id1', buttonText: {displayText: 'kolam'}, type: 1}, 
+{buttonId: 'id1', buttonText: {displayText: 'Kolam 🏝'}, type: 1}, 
 ]
 const buttonMessage = {
-    contentText: `\n*Sepertinya Lu Sudah Kecapekan Bree*\n*Silahkan Istirahat Dulu Ngopi sekitar ${timers}*\n*Untuk bisa melanjutkan Memancing*\n`,
-    footerText: 'SUBREK ucup', 
+    contentText: `*📍 Sepertinya Kakak Sudah Kecapekan Bree*\n*Silahkan Istirahat dul sekitar ${timers} 🕑*\n*Untuk bisa melanjutkan Berak*\n`,
+    footerText: '©KannaBot', 
     buttons: buttons,
     headerType: 1
 }
@@ -55,7 +55,7 @@ zero11 = `${rbrb11}`
 zero12 = `${rbrb12}`
 
 hsl = `
-*《 Hasil Racunin ikan Kali Ini 》*
+*⤷ Ikan yang Kali Ini 🦠↵♯❜*
 
  *🦀 = [ ${zero1} ]*			*🐠 = [ ${zero7} ]*
  *🦞 = [ ${zero2} ]*			 *🐟 = [ ${zero8} ]*
@@ -64,8 +64,7 @@ hsl = `
  *🐙 = [ ${zero5} ]*			 *🦈 = [ ${zero11} ]*
  *🐡 = [ ${zero6} ]*			*🐋 = [${zero12} ]*
 
- *©BY SPYBOT*
- *©YusufRmdn*
+ *©KannaBot*
 `
 global.DATABASE.data.users[m.sender].paus += rbrb1
 global.DATABASE.data.users[m.sender].kepiting += rbrb2
@@ -85,15 +84,15 @@ setTimeout(() => {
                      }, 20000) 
                
                      setTimeout(() => {
-                     m.reply(`*Perfect*`)
+                     m.reply(`*Perfect !*`)
                       }, 18000)
                     
                      setTimeout(() => {
-                     m.reply('Mantap')
+                     m.reply('*Plunggkkq,,,')
                      }, 15000) 
                     
                      setTimeout(() => {
-                     m.reply('Huhh, keluar taik nya bree')
+                     m.reply('H,Huuhtt—')
                      }, 14000) 
                      
                      setTimeout(() => {

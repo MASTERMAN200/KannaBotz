@@ -9,10 +9,9 @@ handler.all = async function (m) {
     let user = global.DATABASE.data.users[m.sender]
     if (new Date - user.pc < 43200000) return // setiap 12 jam
     await this.sendButton(m.chat, `
-Hai, ${ucapan()}
-
-${user.banned ? 'kamu dibanned' : 'Ada yang bisa saya bantu?'}
-`.trim(), '© SpyBot', user.banned ? 'PEMILIK BOT' : '.menu', user.banned ? ',owner' : ',?')
+${ucapan()} Kak !
+${user.banned ? '[❗] Kamu Dibanned Oleh Owner ! (ㆁωㆁ)' : 'Ada yang bisa saya bantu? (ㆁωㆁ)'}
+`.trim(), '🎮 KannaBot', user.banned ? '🐾 Owner' : '⋮☰ Menu', user.banned ? '.owner' : '.mainbutton')
     user.pc = new Date * 1
 }
 
@@ -21,16 +20,16 @@ function ucapan() {
     const time = moment.tz('Asia/Jakarta').format('HH')
     res = "Selamat dinihari"
     if (time >= 4) {
-        res = "Selamat pagi"
+        res = "Selamat pagi 🌄"
     }
     if (time > 10) {
-        res = "Selamat siang"
+        res = "Selamat siang ☀️"
     }
     if (time >= 15) {
-        res = "Selamat sore"
+        res = "Selamat sore 🌅"
     }
     if (time >= 18) {
-        res = "Selamat malam"
+        res = "Selamat malam 🌙"
     }
     return res
 }
