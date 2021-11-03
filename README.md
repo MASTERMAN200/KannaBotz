@@ -27,7 +27,7 @@
 ```
 ###### Run
 ```bash
-> node . [<session name>] (session name is optional)
+> npm start [<session name>] (session name is optional)
 ```
 
 ---------
