@@ -6,14 +6,13 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hello Bree
-Im %me
+🐾 Hyyie , , !
+Im %me !
 
-UserName : %name
-Uptime : %uptime
-Total Features : 1050++
+📇 UserName : %name
+⏱️ Uptime : %uptime
+📃 Total Features : 1050++
 
-Tekan Baca Selengkapnya Bree
 %readmore
 `.trimStart(),
   header: '️',
@@ -21,6 +20,7 @@ Tekan Baca Selengkapnya Bree
   footer: '',
   after: `
 *%npmname@^%version*
+🎮 By : IluluOfficial
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -120,14 +120,14 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     // conn.reply(m.chat, text.trim(), m)
-   conn.sendButton(m.chat, text.trim(), 'Tekan Jika Mau Lihat', '🏡 ALL MENU', '.allmenu', '☕ Owner', '.owner')
+   conn.send2Button(m.chat, text.trim(), '🎮 KannaBot', '〨 Menu', '.simplemenu', '🐾 Owner', '.owner')
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
 handler.help = ['button']
-handler.tags = ['ks']
+handler.tags = ['main']
 handler.command = /^(button)$/i
 handler.owner = false
 handler.mods = false

@@ -65,23 +65,23 @@ const job = global.DATABASE.data.users[m.sender].level
 
  } else if (job >= '70' && job <= '80') {
 
- 			   fernazer = 'Tentara'
+ 			   fernazer = 'Kang kuli'
 
  } else if (job >= '80' && job <= '90') {
 
- 			   fernazer = 'Pekerja Kantoran'
+ 			   fernazer = 'Pengoleksi Waifu'
 
  } else if (job >= '90' && job <= '100') {
 
- 			   fernazer = 'Prostitusi Online'
+ 			   fernazer = 'Kang Gopud'
 
  } else {
 
- 			   fernazer = 'Prostitusi Online'
+ 			   fernazer = 'Hengker Mastah'
 
  }
  
-  	const bars = global.DATABASE.data.chats[m.sender]
+  	const bars = conn.battery
   var fernazer2 = '[▒▒▒▒▒▒▒▒▒]'
 
          if (bars >= '0' && bars <= '5') {
@@ -211,15 +211,15 @@ const freply = {key:{ fromMe:false, participant: `0@s.whatsapp.net`, ...(m.chat 
 
 
 
-							"title": `RP 100.000.00`,
+							"title": `☇︎⊰⋆ Ƙαɴɴα ωαвσт ⊹⊱`,
 
 
 
-							"description" : `${ucapanWaktu}`,
+							"description" : `◈ 𝗠𝗼𝗱𝗲 : ${global.opts['self'] ? 'Private' : 'Publik'}\n◈ 𝗕𝗮𝘁𝘁𝗲𝗿𝘆 : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}`,
 
 
 
-	"productImageCount": 1
+	"productImageCount": 2
 
 
 
@@ -394,61 +394,61 @@ let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')
   
 
 let tags = {
-      'main': 'Start Bot',
-      'daftar': 'Daftar',
-      'abs': 'Absensi Menu', 
-      'vote': 'Vote Menu',
-      'xp': 'Exp & Limit',
-      'expression': 'Expris',
-      'rpg': 'Adventure Menu', 
-      'tutor': 'Tutorial ',
-      'hadiah': 'Hadiah',
-      'dewasa': '18+ Menu',
-      'sange': 'Sangean',
-      'database': 'Database',
-      'group': 'Group Menu',
-      'anime': 'Anime Menu',
-      'wibu': 'Ih Wibu',
-      'panik': 'Prank Menu',
-      'cs': 'Custom Sticker',
-      'sticker': 'Creator Menu',
-      'creator': 'cretor',
-      'editor': 'Editod Menu',
-      'game': 'Fun Menu',
-      'fun': 'Fun Menu',
-      'image': 'Image Menu',
-      'videomaker': 'Video Menu',
-      'video': 'Video Menu',
-      'maker': 'Maker Menu',
-      'anony': 'Anonymous Chat',
-      'audio': 'Audio Menu', 
-      'sound': 'Sound Menu',
-      'convert': 'Convert',
-      'quotes': 'Random Menu',
-      'quran': 'Quran',
-      'islam': 'Islam Menu',
-      'primbon': 'Primbon Menu',
-      'belajar': 'Education Menu',
-      'music': 'Music Menu',
-      'simi': 'Simsimi Menu',
-      'kerang': 'Kerang Menu',
-      'downloader': 'Downloader Menu',
-      'internet': 'Internet',
-      'nulis': 'Mager Ah',
-      'search': 'Search',
-      'apk': 'Apk Menu',
-      'news': 'News Menu',
-      'spam': 'Spammer Menu',
-      'virus': 'Virus ganas',
-      'tools': 'Tools Menu',
-      'jadibot': 'Bot Numpang',
-      'premium': 'Premium & VIP Menu',
-      'owner': 'Owner Menu',
-      'host': 'Host Menu',
-      'about': 'About info',
-      'advanced': 'Advanced',
-      'info': 'Information',          
-      '': 'No Caterogi',
+      'main': '📛 Main Menu',
+      'daftar': '📑 Register Menu',
+      'abs': '📚 Absen Menu', 
+      'vote': '🗳️ Vote Menu',
+      'xp': '✨ Exp & Limit',
+      'expression': '😎 Expression',
+      'rpg': '🌿 RPG', 
+      'tutor': '📃 Tutorial',
+      'hadiah': '🎁 Gift',
+      'dewasa': '🔞 NSFW',
+      'sange': '💦 Sange',
+      'database': '🗃️Database',
+      'group': '📣 Group Menu',
+      'anime': '🧝️Anime Menu',
+      'wibu': '⛩️ Wibu Menu',
+      'panik': '💣 Prank Menu',
+      'cs': '✒ Maker Menu',
+      'sticker': '🎫️Sticker Menu',
+      'creator': '🧷 Creator',
+      'editor': '🎬 Editor Menu',
+      'game': '🎯 Game Menu',
+      'fun': '🧩 Fun Menu',
+      'image': '🖼 Image Menu',
+      'videomaker': '🎥 Video Maker',
+      'video': '📼 Video Menu',
+      'maker': '📠 Maker Menu',
+      'anony': '👤 Anonymous Chat',
+      'audio': '🎙️Audio Menu', 
+      'sound': '🔉 Sound Menu',
+      'convert': '🎴 Convert',
+      'quotes': '💭 Quotes Menu',
+      'quran': '📖 Quran',
+      'islam': '🕌 Islam Menu',
+      'primbon': '🔮 Primbon Menu',
+      'belajar': '🌐 Education Menu',
+      'music': '🎶 Music Menu',
+      'simi': '💬 Simsimi Menu',
+      'kerang': '🐚 Kerang Menu',
+      'downloader': '💾 Downloader Menu',
+      'internet': '🖥️ Internet',
+      'nulis': '📝 Nulis Menu',
+      'search': '🔎 Search',
+      'apk': '🤖 Apk Menu',
+      'news': '📰 News Menu',
+      'spam': '📯 Spammer Menu',
+      'virus': '👾 Virus',
+      'tools': '⚒️Tools Menu',
+      'jadibot': '💻 JadiBot',
+      'premium': '🪄 Premium & VIP Menu',
+      'owner': '🛂 Owner Menu',
+      'host': '📢 Host Menu',
+      'about': 'ℹ️About',
+      'advanced': '🔱 Advanced',
+      'info': 'ℹ️Information',          
+      '': '▪️ No Category',
       'thnks': 'THANKS TO',
     }
 
@@ -493,93 +493,57 @@ let tags = {
     conn.menu = conn.menu ? conn.menu : {}
 
     let before = conn.menu.before || `
-╭─❏「 BOT INFO 」
-│
-│❏ Bot Name : ${conn.getName(conn.user.jid)}
-│❏ Mention : @${m.sender.replace(/@.+/, '')}}
-│❏ Owner : YusufRmdn
-│❏ Limit :  %limit Limit
-│❏ Prefix : 『 %p 』
-│❏ Total Features : 983+
-│❏ Version : 10.7
-│❏ Battery : %battery
-│❏ Battery Bars : ${fernazer2}
-│❏ User : %totalreg ɴᴏᴍᴏʀ
-│❏ Group : %totalgc 
-│❏ No Owner : wa.me/62895704368804
-│
-╰────❏
-
-╭─❏「 USER INFO 」
-│
-│❏ UserName : %name
-│❏ Serial Number : %sn
-│❏ Mention : *@${m.sender.replace(/@.+/, '')}
-│❏ Age : ${registered ? '' + age : ''}
-│❏ Phone Number : ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-│❏ Registered : ${registered ? 'Yes': 'No'}
-│❏ Premium User : ${premium ? 'Yes': 'No'}
-│❏ Pekerjaan : ${fernazer}
-│❏ Role : %role
-│❏ Health : %healt
-│❏ Coin : %coin
-│❏ Money : RP %money
-│❏ Ticket : %limit
-│❏ Game Limit : %tigame
-│❏ Level : %level
-│❏ Exp : %exp
-│❏ Exp To Levelup : %xp4levelup
-│❏ Total Exp : %totalexp
-│
-╰────❏
-
-╭─❏「 WAKTU/TIME 」
-│
-│❏ Day : %week
-│❏ Date : %date
-│❏ New Year : ${hariRaya}
-│❏ Weton : %weton
-│❏ Islamic Date : ${dateIslamic}
-│❏ Time : %time WIB
-│❏ Time : ${wit} WIT
-│❏ Time : ${wita} WITA
-│
-╰────❏
-
-╭─❏「 DATA BOT 」
-│
-│❏ Uptime : %uptime
-│❏ Main Uptime : %muptime
-│❏ Users In Database : %totalreg Users
-│❏ Registered : %rtotalreg
-│❏ Total GC : %totalgc
-│
-╰────❏
-
-╭─❏「 CUSTOMER SERVICE 」
-│
-│❏ Request : .request
-│❏ Bug : .bug / .report
-│❏ Masukan / Request Palsu tidak Akan
-│❏ Di Tanggapi Oleh Bot
-│
-╰────❏
-
-╭─❏「 Source Info 」
-│
-│❏ Github : Github : https://github.com/Fernazer
-│❏ Yutub : Yutube : https://youtube.com/channel/UCB9T1d_LG16EHf350BZIIYw
-│❏ Grup : https://chat.whatsapp.com/CAKETl3LJdELqHTqOJtH4S
-│
-╰────❏
+☇︎⊰⋆ 🎮 Ƙαɴɴα ωαвσт ᵒᶠᶠⁱᶜⁱᵃˡ ⊹⊱
 %readmore
+╭─› *🤖 BOT INFO*
+│
+│🤖 Bot Name : ${conn.getName(conn.user.jid)}
+│🪀 Owner : ίℓʋɭų ǫғғιcιαℓ 
+│� No Owner : wa.me/6285712420674
+│⏱ ️ Runtime : %uptime
+│🔖 Prefix : 『 *%p* 』
+│📣 Total Features : 983+
+│📱 Version : 10.7
+│🔌 Baterai : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+│🔋 Battery Bars : ${fernazer2}
+│👤 User : %totalreg ɴᴏᴍᴏʀ
+│💬 Group : %totalgc
+│🗃 ️ Database : %rtotalreg dari %totalreg
+╰────╮
 
+╭─› *⏱️WAKTU/TIME*
+│
+│📆 Day : %week
+│📅 Date : %date
+│🎉 New Year : ${hariRaya}
+│📆 Weton : %weton
+│🗓️ Islamic Date : ${dateIslamic}
+│🕑 Time : ${wit} WIT
+│🕐 Time : ${wita} WITA
+│🕛 Time : ${time} WIB
+╰────╮
+
+╭─› *📞 CUSTOMER SERVICE*
+│
+│📞 Request : .request
+│📞 Bug : .bug / .report
+│📞 Masukan / Request Palsu tidak Akan
+│📞 Di Tanggapi Oleh Bot
+╰────╮
+
+╭─› *💻 Source Info*
+│
+│💻 Github : https://github.com/Zeeoneofc
+│🎮 Discord : https://discord.gg/WEJQjugTY7
+│🥏 Grup : https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT
+╰────╮
+%readmore
 `
-    let header = conn.menu.header || '╭─❏「 %category 」'
+    let header = conn.menu.header || '*%category*'
     
-    let body   = conn.menu.body   || '│❏ %cmd%islimit'
+    let body   = conn.menu.body   || '*•* %cmd%islimit'
     
-    let footer = conn.menu.footer || '╰────❏\n'
+    let footer = conn.menu.footer || '๑————————————๑\n'
 
     let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered By @${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
 
@@ -641,7 +605,7 @@ let tags = {
 
     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => ''+replace[name])
 
-await conn.send2Button(m.chat, ucapanWaktu, 'Klo Mau Hubungi Owner Atau Donasi Lewat Sini Ya Kak\n\nSpyBot', 'OWNER BOT', '.owner', 'DONASI BRE', '.donasi', { quoted: freply })
+await conn.send2Button(m.chat, ucapanWaktu, '🎮 KannaBot', '🐾️Owner', '.owner', '📇 Profile', '.profile', { quoted: freply })
 
     ppnya = global.thumbnail ? global.thumbnail : Buffer.alloc(0)
 
@@ -650,7 +614,7 @@ await conn.send2Button(m.chat, ucapanWaktu, 'Klo Mau Hubungi Owner Atau Donasi L
 
     externalAdReply: {
 
-                    title: `Created By YusufRmdn`,
+                    title: `ᴮʸ ᴵˡᵘˡᵘᴼᶠᶜ`,
 
                     body: `${ucapanWaktu} ${name}`,
 
@@ -673,10 +637,10 @@ await conn.send2Button(m.chat, ucapanWaktu, 'Klo Mau Hubungi Owner Atau Donasi L
   }
 
 }
-handler.help = ['allmenu']
+handler.help = ['menu']
 handler.tags = ['kd']
-handler.command = ['allmenu']
-handler.owner = false
+handler.command = ['slayermenu']
+handler.owner = true
 handler.mods = false
 handler.premium = false
 handler.group = false

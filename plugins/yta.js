@@ -2,15 +2,19 @@ let limit = 30
 const { servers, yta } = require('../lib/y2mate')
 let handler = async (m, { conn, args, isPrems, isOwner }) => {
   if (!args || !args[0]) throw 'Uhm... urlnya mana?'
-  let chat = global.DATABASE._data.chats[m.chat]
+  let chat = global.DATABASE.data.chats[m.chat]
   let server = (args[1] || servers[0]).toLowerCase()
   let { dl_link, thumb, title, filesize, filesizeF} = await yta(args[0], servers.includes(server) ? server : servers[0])
   let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
-  conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
-*Title:* ${title}
-*Filesize:* ${filesizeF}
-*${isLimit ? 'Pakai ': ''}Link:* ${dl_link}
-`.trim(), m)
+  conn.sendButtonImg(m.chat, `📥DOWNLOADER`, thumb, `
+╭────[ _*YT DOWNLOADER*_ ]
+│• *Title:* ${title}
+│• *Filesize:* ${filesizeF}
+│
+│ _sedang mengkonversi file..._
+╰──────────────────<
+🎮 KannaBot
+`, `Video`, `.ytv ${args[0]}`, m)
   if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
 *Title:* ${title}
 *Filesize:* ${filesizeF}
@@ -18,8 +22,8 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
   asDocument: chat.useDocument
 })
 }
-handler.help = ['mp3','a'].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
-handler.tags = ['downloader']
+handler.help = ['mp3','yta'].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
+handler.tags = ['downloader','internet']
 handler.command = /^yt(a|mp3)$/i
 handler.owner = false
 handler.mods = false
@@ -35,4 +39,3 @@ handler.exp = 0
 handler.limit = true
 
 module.exports = handler
-

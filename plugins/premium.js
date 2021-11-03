@@ -1,31 +1,47 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 let info = `
-╭─「 BUY PREMIUM 」
-│ 
-│ > Keuntungan :
-│• Limit Tidak Terbatas!
-│• Fitur Premium Dapat Digunakan!
-│• Dapat Menambahkan Bot Ke Grup!
-│
-│ > Bonus :
-│• Diberi 5 Limit Setiap Hari
-│
-│ > Harga :
-│• 10K / Bulan (4 Minguu)
-│• 30K / Tahun (12 Bulan)
-│• 50K / VIP (Permanen)
-│
-│ > Pembayaran :
-│• Three : 62895704368804
-│• Dana : 62895704368804
-╰────
-`.trim()
+╭═══ *〘 BUY PREMIUM 〙*
+║ ┅ ๑————————————๑                                         
+║┊ ⌲ *Buy* = _5k/minggu (7 Hari)_
+║┊ ⌲ *Buy* = _10k/bulan (1 bulan)_
+║┊ ⌲ *Buy* = _20k/tahun (12 bulan)_
+║┊ ⌲ *VIP* = _30k/Permanent_
+╰═ ┅ ═══════                                               
+╭═══ *〘 Via 〙*
+║ ┅ ๑————————————๑
+║┊ ⌲ *INDOSAT* : _085712420674_
+║┊ ⌲ *AXIS* : _083143393763_
+║┊ ⌲ *OVO* : _085712420674_
+║┊ ⌲ *GOPAY* : _085712420674_
+║┊ ⌲ *DANA* : _085712420674_
+║┊ ⌲ *SAWERIA* : _https://saweria.co/KannaBotz_
+╰═ ┅ ═══════
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*BOT TERVERIFIKASI*', 'status@broadcast')
+༅ _*KEUNTUNGAN USER PREMIUM*_
+
+✧ *Fitur Premium Terbuka*
+✧ *Limit UNLIMITED*
+✧ *Bisa Menyuruh Bot Buka/Tutup Group*
+✧ *Kick Orang*
+✧ *Add Orang*
+✧ *Anti Link On*
+✧ *Fitur Game Banyak Sepuas Nya Main*
+✧ *Bisa Memasukkan Bot Ke dalam Grup*
+✧ *Fitur Nsfw Terbuka*
+
+
+◪ *Jika Minat Hubungi owner kami*
+◪ *Atau Masuk Group Official Bot*
+_https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT_
+
+Ingin Jadi Bot Seperti ini?
+ketik #jadibot
+`.trim()
+conn.sendButton(m.chat,info, `🎮 KannaBot`, `🐾 Owner`, `.owner`, m)
 } 
 handler.help = ['premium']
 handler.tags = ['info']
-handler.command = /^(premium)$/i
+handler.command = /^premium$/i
 
 handler.owner = false
 handler.mods = false

@@ -10,6 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   if ((args[0] && args[0] == 'plz') || global.conn.user.jid == conn.user.jid) {
     let id = global.conns.length
     let conn = new global.conn.constructor()
+    conn.version = global.conn.version
     if (args[0] && args[0].length > 200) {
       let json = Buffer.from(args[0], 'base64').toString('utf-8')
       // global.conn.reply(m.isGroup ? m.sender : m.chat, json, m)
@@ -71,7 +72,8 @@ handler.tags = ['jadibot']
 
 handler.command = /^jadibot$/i
 
-handler.premium = true
+handler.premium = false
+handler.private = true
 handler.limit = true
 
 module.exports = handler
