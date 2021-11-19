@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┃
 ┣━━°❀❬ *NSFW PREMIUM* ❭❀°━━┓
 ┃
-┣➥ *${usedPrefix}bokep*
+┣➥ *${usedPrefix}filebokep*
 ┣➥ *${usedPrefix}ass*
 ┣➥ *${usedPrefix}bdsm*
 ┣➥ *${usedPrefix}blowjob*
@@ -43,10 +43,14 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┣➥ *${usedPrefix}ecchi*
 ┣➥ *${usedPrefix}yuri*
 ┣➥ *${usedPrefix}nsfwwaifu*
+┣➥ *${usedPrefix}trap*
+┣➥ *${usedPrefix}tits*
+┣➥ *${usedPrefix}nsfwholo*
 ┃ 
 ┣━━°❀❬ *NSFW FREE* ❭❀°━━┓
-┃.
+┃
 ┣➥ *${usedPrefix}nsfwneko*
+┣➥ *${usedPrefix}loli18*
 ┣➥ *${usedPrefix}manga*
 ┣➥ *${usedPrefix}tentacles*
 ┣➥ *${usedPrefix}thighs*
@@ -55,10 +59,19 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┣➥ *${usedPrefix}kodenuklir*
 ┣➥ *${usedPrefix}glasses*
 ┣➥ *${usedPrefix}cersex*
-┣➥ *${usedPrefix}nhpdf*
 ┣➥ *${usedPrefix}panties*
 ┣➥ *${usedPrefix}ahegao*
-┃.
+┣➥ *${usedPrefix}milf*
+┣➥ *${usedPrefix}nekoo*
+┣➥ *${usedPrefix}holoero*
+┃
+┣━━°❀❬ *NHENTAI* ❭❀°━━┓
+┃
+┣➥ *${usedPrefix}nhpdf*
+┣➥ *${usedPrefix}nhsearch*
+┣➥ *${usedPrefix}nhd*
+┣➥ *${usedPrefix}nh <code>*
+┃
 ┣━━°❀❬ *TQTO* ❭❀°━━┓
 ┃ 
 ┣➥ *Nurotomo (author)*
@@ -68,7 +81,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┣➥ *Fernazer*
 ┣➥ *Layscode*
 ┣➥ *Zeks*
-┣➥ *Dll
+┣➥ *Dll*
 ┗━━━━━━━━━━━━━━━━
 `.trim()
     let mentionedJid = [who]

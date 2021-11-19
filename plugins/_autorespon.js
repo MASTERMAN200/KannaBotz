@@ -7,6 +7,7 @@ handler.all = async function (m, { isBlocked }) {
     if (m.isBaileys) return
     if (m.chat.endsWith('broadcast')) return
     let chat = DATABASE.data.chat
+    this.lastSetStatus = this.lastSetStatus ? this.lastSetStatus : {}
     let { isBanned } = DATABASE.data.chats[m.chat]
     let { banned } = DATABASE.data.users[m.sender]
     
@@ -16,9 +17,9 @@ handler.all = async function (m, { isBlocked }) {
             await this.send2Button(m.chat,
                 isBanned ? 'KannaBotz tidak aktif' : banned ? 'kamu dibanned' : 'A,ada apa kakk ? (＾▽＾)',
                 'K a n n a  B o t z',
-                isBanned ? '🔓 • UNBAN ༅' : banned ? '🎋 • Owner' : '彡 MENU',
-                isBanned ? '.unban' : banned ? '.owner' : '.mainbutton',
-                m.isGroup ? '🍀 • Donasi' : isBanned ? '🔓 • UNBAN' : '🍀 • DONASI',
+                isBanned ? '♎︎ • UNBAN ༅' : banned ? '❦ Owner' : '⋮☰  Menu',
+                isBanned ? '.unban' : banned ? '.owner' : '.menu',
+                m.isGroup ? '✢ Donasi' : isBanned ? '♎︎ UNBAN' : '✢ DONASI',
                 m.isGroup ? '.donasi' : isBanned ? '.unban' : '.donasi')
         }
     } catch (e) {
@@ -36,7 +37,7 @@ handler.all = async function (m, { isBlocked }) {
 ╭╯
 ├https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT
 ╰╮
-`.trim(), '© καɴɴα вσтᴢ', '✨ Owner ✨', '.owner', { contextInfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })
+`.trim(), '© καɴɴα вσтᴢ', '🌹 Owner', '.owner', { contextInfo: { mentionedJid: [global.owner[0] + '@s.whatsapp.net'] } })
     }
 
     // salam
@@ -45,7 +46,23 @@ handler.all = async function (m, { isBlocked }) {
     if (isSalam && !m.fromMe) {
         m.reply(`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ\n_wa\'alaikumussalam wr.wb._`)
     }
-
+    if (!(this.lastSetStatus) || ! isNumber(this.lastSetStatus)) this.lastSetStatus = 0
+    if (new Date - this.lastSetStatus > 10000) {
+      let package = JSON.perse(await fs.promises.readFile(path.joim(__dirname, '../ package.json')).catch(_=> '{}'))
+      let npmname = package.name
+      let npmdesc = package.description
+      let version = package.version
+      let github = package.homepage ? package.hompage.url || package.hompage : '[unknown github url]'
+      let _uptime = process.uptime() * 1000
+      let uptime = clockString(_uptime)
+      //let _muptime = await muptime()
+      let random = [
+`✧ Whatsapp Bot │⊰ By ίℓʋɭų ǫғғιcιαℓ あ │◟καɴɴα вσт◞│⋆ ada pertanyaan chat /owner`
+`⎋ Aktif Selama ${uptime} │ ✘ Mode : ${global.opts['self'] ? 'Self' : 'Publik'}`
+`Https://github.com/bochilgaming/games-wabot/`
+      ]
+       await this.setStatus(pickRandom(random)).catch(_=>_)
+       this.lastSetStatus = new Date * 1
 }
 
 module.exports = handler
@@ -57,6 +74,25 @@ function clockString(ms) {
     return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
 }
 
-function pickRandom(list) {
-    return list[Math.floor(Math.random() * list.length)]
+function pickRandom(arr) {
+    return arr[Math.round(arr.length * Math.random())]
 }
+
+function isNumber(x) {
+  x = parselnt(x)
+  return typeof x == 'number' && !isNaN(x)
+}
+
+/*
+ async function muptime() {
+ let _muptime
+ if (process.send) {
+    process.send('uptime')
+    _muptime = await new Promise(resolve => {
+      process.once('message', resolve)
+      setTimeout(resolve, 1000)
+    }) * 1000
+  }
+   return clockString(_muptime)
+}
+*/

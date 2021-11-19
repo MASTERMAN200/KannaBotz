@@ -1,68 +1,68 @@
 let handler = async (m, { conn }) =>
 conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": "🌟 hy !\nSaya KannaBotz\n⤷ Pilih Menu Di Bawah Yaa\n\n\n🪀 Join Group WhatsApp\nhttps://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT\n\n🎮 • Join Discord\nhttps://discord.gg/WEJQjugTY7",
-                        "description": "καɴɴα вσтᴢ ᵒᶠᶜ-",
-                        "buttonText": "Click Here",
+                        "title": "╭━━━━━━━━━━━━━━━━┈\n│       *KANNA BOT*\n└┬──────────┈──┦\n╭┼------------·····------------\n││ *[❗] Harap patuhi !*\n│┝▸ Dilarang Spam Command Bot\n│┝▸ Dilarang Call Bot\n│├─────────···\n││ 🎋 *Restapi :*\n││ ▸ https://restapi-kannabot.herokuapp.com/\n│╰────────────┈⊰\n│ *Owner :* Letta\n│ *Author :* Nurutomo\n╰━━━━━━━━━━━━━━━━┈⊰",
+                        "description": "©Ƙαɴɴαвσт ᵒᶠᶠⁱᶜⁱᵃˡ-",
+                        "buttonText": ".,๑ 𝗠𝗘𝗡𝗨 ๑,.",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                              "rows": [
                                     {
-                                        "title": `⤷ Download Menu 📲↵♯❜`,
-                                        "description": "\n[📲] Downloader Menu",
-                                        "rowId": ".downloadmenu"
+                                        "title": `[🧾] Semua  Perintah`,
+                                        "description": "Menampilkan Semua Fitur",
+                                        "rowId": ".allmenu"
                                     },{
-                                        "title": "⤷ Database Menu 📂↵♯❜",
-                                        "description": "\n[📂] Database Menu",
+                                        "title": "[🗃️] Database",
+                                        "description": "Simpan Sesuatu Di Bot",
                                         "rowId": ".dbmenu"                 
                                     },{
-                                        "title": "⤷ Button Menu 🔴↵♯❜",
-                                        "description": "\n[🔴] Button Menu",
-                                        "rowId": ".button"                 
+                                        "title": "[🎯] Game",
+                                        "description": "Main Berbagai Game Di Bot !",
+                                        "rowId": ".gamemenu"                 
                                     },{
-                                	"title": "⤷ All Menu 🔖↵♯❜",
-                                        "description": "\n[🔖] Allmenu",
-                                        "rowId": ".allmenu"                 
+                                        "title": "[📲] Downloader",
+                                        "description": "Download Sesuatu Di Bot",
+                                        "rowId": ".downloadmenu"                 
                                     },{
-                                        "title": "⤷ Jadibot Menu 🤖↵♯❜",
-                                        "description": "\n[🤖] Jadibot Menu",
+                                        "title": "[🤖] JadiBot",
+                                        "description": "Jadi Bot",
                                         "rowId": ".jadibotmenu"                 
                                     },{
-                                        "title": "⤷ Owner Menu 🪀↵♯❜",
-                                        "description": "\n[🪀] Owner Menu",
-                                        "rowId": ".ownermenu"                 
+                                        "title": "[🎬] Editor",
+                                        "description": "Edit Sesuatu Di Bot !",
+                                        "rowId": ".editormenu"                 
                                     },{
-                                        "title": "⤷ Hentai Menu 🔞↵♯❜",
-                                        "description": "\n[🔞] Hentai Menu",
-                                        "rowId": ".hentaimenu"                 
+                                        "title": "[💻] Search",
+                                        "description": "Cari Sesuatu Di Bot",
+                                        "rowId": ".searchmenu"                 
                                     },{
-                                        "title": "⤷ Absen Menu 📚↵♯❜",
-                                        "description": "\n[📚] Absen Menu",
-                                        "rowId": ".absenmenu"                 
+                                        "title": "[🐚] Kerang",
+                                        "description": "Kerang Ajaib !!",
+                                        "rowId": ".kerangmenu"                 
                                     }, {
-                                        "title": "⤷ Group Setting 📢↵♯❜",
-                                        "description": "\n[📢] Group Settings",
-                                        "rowId": ".groupset"
+                                        "title": "[🏢] Group",
+                                        "description": "Atur Group Mu",
+                                        "rowId": ".grupmenu"
                                     }, {    
-                                        "title": "⤷ Primbon Menu 🔮↵♯❜",
-                                        "description": "\n[🔮] Primbon Menu",
+                                        "title": "[🔮] Primbon",
+                                        "description": "Ramal Diri Mu !",
                                         "rowId": ".primbonmenu"
                                         
                                     }, {       
-                                        "title": "⤷ 18+ Menu 🔞↵♯❜",
-                                        "description": "\n[🔞] 18+ Menu",
+                                        "title": "[🔞] Nsfw",
+                                        "description": "Menu Bokep",
                                         "rowId": ".dewasamenu"
-                                        
-                                   }, {        
-                                        "title": "⤷ Edukasi Menu 🏫↵♯❜",
-                                        "description": "\n[🏫] Education Menu",
+                                       
+                                    }, {        
+                                        "title": "[🏫] Edukasi",
+                                        "description": "Menu Edukasi",
                                         "rowId": ".educationmenu"
                                         
-                                   }, {             
-                                        "title": "⤷ Edit Menu 🎬↵♯❜",
-                                        "description": "\n[🎬] Editz Menu",
-                                        "rowId": ".editormenu"
+                                    }, {             
+                                        "title": "[🧪] Owner",
+                                        "description": "Menu Khusus Owner",
+                                        "rowId": ".ownermenu"
                                     }
                                 ]
                             }
@@ -72,6 +72,6 @@ conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
 }
                     }
                  }, {}), {waitForAck: true})
-handler.command = ['simplemenu', 'listmenu']
+handler.command = ['menu']
 handler.register = true
 module.exports = handler

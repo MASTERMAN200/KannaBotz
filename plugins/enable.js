@@ -107,7 +107,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
     case 'public':
       isAll = true
-      if (!isROwner) {
+      if (!isOwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
@@ -247,7 +247,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 ├❏ antitroli
 ├❏ autolevelup
 ├❏ autoread
-├❏ backup
 ├❏ delete
 ├❏ detect
 ├❏ document

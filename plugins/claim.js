@@ -6,12 +6,13 @@ let handler = async (m, { conn }) => {
     let _timers = (86400000 - __timers)
     let timers = clockString(_timers) 
     if (new Date - user.lastclaim > 86400000) {
-        conn.reply(m.chat, `Anda sudah mengklaim dan mendapatkan 1000 💵money dan 1 potion`, m)
+        conn.reply(m.chat, ` Anda sudah mengklaim dan mendapatkan 1000 money💵, 1 potion🥤 dan 2 Kayu 🪵️`, m)
         global.DATABASE._data.users[m.sender].money += 1000
+        global.DATABASE._data.users[m.sender].kayu += 2
         global.DATABASE._data.users[m.sender].potion += 1
         global.DATABASE._data.users[m.sender].lastclaim = new Date * 1
     } else {
-        let buttons = button(`silahkan tunggu *🕒${timers}* lagi untuk bisa mengclaim lagi`, user)
+        let buttons = button(`silahkan tunggu *⏱️${timers}* lagi untuk bisa mengclaim lagi`, user)
         conn.sendMessage(m.chat, buttons, MessageType.buttonsMessage, { quoted: m })
     }
 }
@@ -43,6 +44,7 @@ function clockString(ms) {
   return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
 }
 
+let botol = global.botwm
 function button(teks, user) {
     const buttons = []
     
@@ -51,14 +53,14 @@ function button(teks, user) {
     let weekly = new Date - user.lastweekly > 604800000
     console.log({claim, monthly, weekly})
     
-    if (monthly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/monthly'}, type: 1})
-    if (weekly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/weekly'}, type: 1})
-    if (claim) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/claim'}, type: 1})
+    if (monthly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: 'monthly'}, type: 1})
+    if (weekly) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: 'weekly'}, type: 1})
+    if (claim) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: 'claim'}, type: 1})
     if (buttons.length == 0) throw teks
     
     const buttonMessage = {
         contentText: teks,
-        footerText: '🎮 Games KannaBot',
+        footerText: `${botol}`,
         buttons: buttons,
         headerType: 1
     }

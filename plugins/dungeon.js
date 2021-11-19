@@ -9,9 +9,9 @@ async function handler(m, { conn, usedPrefix, command, text }) {
         const buttons = []
 
         console.log({SWORD, ARMOR, HEALT})
-        if (SWORD) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/craft sword'}, type: 1})
+        if (SWORD) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/Craft sword'}, type: 1})
         if (ARMOR) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/beli armor'}, type: 1})
-        if (HEALT) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/heal'}, type: 1})
+        if (HEALT) buttons.push({buttonId: `id${buttons.length + 1}`, buttonText: {displayText: '/Heal'}, type: 1})
         
         let lmao = item(user.sword * 1, user.armor * 1, user.healt * 1, usedPrefix)
         if (buttons.length == 0) return m.reply(lmao)   
@@ -59,7 +59,7 @@ async function handler(m, { conn, usedPrefix, command, text }) {
         let lmao = `${!room.game.player4 ? `Menunggu ${!room.game.player3 && !room.game.player4 ? '2' : '1'} Partner lagi... ${room.name ? `mengetik command dibawah ini *${usedPrefix}${command} ${room.name}*` : ''}` : 'Semua partner telah lengkap...'}`
         const buttonMessage = {
             contentText: lmao,
-            footerText: '©games-wabot',
+            footerText: '🎮 Games Kannabot',
             buttons: buttons,
             headerType: 1
         }
@@ -687,7 +687,7 @@ function item(sword, armor, healt, usedPrefix) {
   let a = (armor * 1) < 1
   let h = (healt * 1) < 90
   let str = `
-${sw ? 'Kamu belum memiliki ⚔️Sword' : ''}${sw && a && h ? ',' : sw && a ? ' dan ' : ''} ${a ? '🥼Armor' : ''}${sw && a && h ? ' dan Minimal 90 ❤Health' : h ? 'Minimal 90 ❤Health' : ''}${sw ? `\nuntuk mendapatkan ⚔Sword ketik *${usedPrefix}craft sword*` : ''}${a ? `\nuntuk mendapatkan 🥼Armor ketik *${usedPrefix}buy armor*` : ''}${h ? `\nuntuk menambah ❤Health ketik *${usedPrefix}heal*` : ''}
+${sw ? 'Kamu belum memiliki ⚔️Sword' : ''}${sw && a && h ? ',' : sw && a ? ' dan ' : ''} ${a ? '🥼Armor' : ''}${sw && a && h ? ' dan Minimal 90 ❤Health' : h ? 'Minimal 90 ❤Health' : ''}${sw ? `\nuntuk mendapatkan ⚔Sword ketik *${usedPrefix}craft sword*` : ''}${a ? `\nuntuk mendapatkan 🥼Armor ketik *${usedPrefix}shop buy armor*` : ''}${h ? `\nuntuk menambah ❤Health ketik *${usedPrefix}heal*` : ''}
   `.trim()
   return str
 }

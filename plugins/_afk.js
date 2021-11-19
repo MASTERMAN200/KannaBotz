@@ -4,8 +4,8 @@ handler.before = m => {
   if (user.afk > -1) {
     m.reply(`╭ *◇ AFK ◇* ╮
 ├╯ *BERHENTI AFK !*
-├🔖 ${user.afkReason ? ' Setelah ' + user.afkReason : ''}
-├🔖 Time : ${clockString(new Date - user.afk)}
+├🧾 ${user.afkReason ? ' *Setelah* : ' + user.afkReason : ''}
+├⏱️ *Time* : ${clockString(new Date - user.afk)}
 ╰╮ © KannaBot
 `.trim())
     user.afk = -1
@@ -19,9 +19,9 @@ handler.before = m => {
     if (!afkTime || afkTime < 0) continue
     let reason = user.afkReason || ''
     m.reply(`╭ *◇ AFK MODE ◇* ╮
-├╯📢 Jangan tag dia! Dia sedang AFK !
-├🔖 ${reason ? 'Dengan Alasan ' + reason : 'Tanpa Alasan'}
-├🔖 Time : ${clockString(new Date - afkTime)}
+├╯[❗] Jangan tag dia! Dia sedang AFK !
+├🧾 ${reason ? '*Alasan* : ' + reason : 'Tanpa Alasan'}
+├⏱️ *Time* : ${clockString(new Date - afkTime)}
 ╰╮ © KannaBot
 `.trim())
   }

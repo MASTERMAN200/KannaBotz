@@ -1,14 +1,15 @@
 let handler = async (m) => {
     let user = DATABASE.data.users[m.sender]
+    let botol = global.botwm
     let who = m.mentionedJid && m.mentionenJid ? m.mentionedJid : m.fromMe ? conn.user.jid : m.sender
     let mentionedJid = [m.sender]
     let username = conn.getName(who)
-    let str = `🔥 *Dosa ${username}* : ${user.warning} / 50
-`.trim(), m)
-    conn.sendButton(m.chat, str, `🎮 KannaBot`, `Tobat 🛐`, `.maaf`, m)
+    let str = `*▸ Dosa* ${username} *:* _${user.warning} / 50_
+`.trim()
+    conn.sendButton(m.chat, str, `${botol}`, `—‹ Tobat ›—`, `.maaf`, m)
 }
 handler.help = [`cekdosa`]
-handler.tag = [`fun`,`islam`]
+handler.tag = [`fun`,`islam`,'cek']
 handler.command = /^(cekdosa|dosa)$/i
 
 module.exports = handler

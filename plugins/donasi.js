@@ -1,4 +1,6 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
+let pp = 'https://telegra.ph/file/c9f6f5b4e184a88de5da3.jpg'
+let botol = global.botwm
 let str = `
 ››╭─〘 *Donasi* 〙
 ╭╡
@@ -10,13 +12,13 @@ let str = `
 │┝‷✧ *Saweria:* https://saweria.co/KannaBotz
 │╰───···─────
 │⁺◛˖ Ingin Donasi? Chat
-│wa.me/6285712420674?text=bang+mau+donasi
+│wa.me/6285712420674?text=kak+mau+donasi
 ╰──────────···───╮
 
 *[ ❗ ] Bonus :*
 Yang Donasi Dapet premium 3 hari, Free !
 `.trim()
-conn.sendButton(m.chat,str, `🎮 KannaBot`, `🐾 Owner`, `.owner`, m)
+conn.sendButtonImg(m.chat,str,pp, `${botol}`, `🐾 Owner`, `.owner`, m)
 }
 handler.help = ['donasi']
 handler.tags = ['info']

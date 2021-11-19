@@ -11,10 +11,11 @@ handler.all = async function (m) {
     await this.sendButton(m.chat, `
 ${ucapan()} Kak !
 ${user.banned ? '[❗] Kamu Dibanned Oleh Owner ! (ㆁωㆁ)' : 'Ada yang bisa saya bantu? (ㆁωㆁ)'}
-`.trim(), '🎮 KannaBot', user.banned ? '🐾 Owner' : '⋮☰ Menu', user.banned ? '.owner' : '.mainbutton')
+`.trim(), `${botol}`, user.banned ? '🐾 Owner' : '⋮☰ Menu', user.banned ? '.owner' : '.menu')
     user.pc = new Date * 1
 }
 
+let botol = global.botwm
 module.exports = handler
 function ucapan() {
     const time = moment.tz('Asia/Jakarta').format('HH')

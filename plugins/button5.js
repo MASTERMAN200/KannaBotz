@@ -4,9 +4,9 @@ let { name, limit, level, role, age, money, healt, premium, registered } = globa
 pp = await conn.getProfilePicture(global.conn.user.jid)
 conn.send2ButtonImg(m.chat, 'Pilih Menu Di Bawah ya\nDan Jangan Lupa Baca Rules Dibawah Ini\n\n📢 Spam = Banned\n📢 Telp = Blok\n\n🔖 Follow My ig :\n⤷ Ppiowy_\n\n💭 Join My Grup WhatsApp Official\n⤷ https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT\n\n\n📛 My Rest Api\n⤷ https://yusufz-api.herokuapp.com\n⤷ https://yusufbot.api.herokuapp.com', 'https://i.postimg.cc/jjz8YvZj/d0f8b804a908ce4aaee63d54035d2192.jpg', `📇 INFO USER ↵♯❜\n\n📑 Registered : ${registered ? 'Yes': 'No'}\n🏷  Name : ${name}\n〽️ Age : ${age}\n🎫 Ticket : ${limit}\n📍 Role : ${role}\n💹 Money : ${money}\n📊 Level : ${level}\n❤️ Health : ${healt}\n🌟 Premium : ${premium ? 'Yes': 'No'}\n\n📔 Thanks To\nNurutomo\nAriffb25\nFernazer\nRudiAchil\nZeroBot\nBochillGaming\nNYX\nThe.sad.boy01\nMe\nAnd All Creator Bot\n\nUntuk Wa Mod, Ketik .simplemenu atau .allmenu`.trim(), '⋮☰ LISTMENU', '/mainbutton', '🔎 INFO', '.info',m)
   }
-handler.help = ['menu', 'help']
+handler.help = ['about']
 handler.tags = ['main'] 
-handler.command = /^(menu)$/i
+handler.command = /^(about)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false

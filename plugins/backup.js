@@ -9,7 +9,7 @@ let handler  = async (m, { conn, DevMode }) => {
               year: 'numeric'
         })
         await global.DATABASE.save()
-        await fs.copyFile(`./database.json`, `./database ${date}.json`, (err) => {
+        await fs.copyFile(`./database.json`, `./src/database ${date}.json`, (err) => {
             if (err) {
                 console.log(err)
                 if (DevMode) {

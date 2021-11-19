@@ -4,11 +4,11 @@ let fs = require('fs')
     const buttons = [
         {buttonId: '.nomorowner', buttonText: {displayText: '✧ Nomor Owner'}, type: 1},
         {buttonId: '.info', buttonText: {displayText: '➲ Info'}, type: 1},
-        {buttonId: '.mainbuntton', buttonText: {displayText: '⋮☰ Back'}, type: 1},
+        {buttonId: '.menu', buttonText: {displayText: '⋮☰ Back'}, type: 1},
     ]
 
     const buttonMessage = {
-        contentText: "*BIOTADA OWNER*\n\n*Nama* : Letta\n*Umur* : 12 Tahun\n*Kelas* : 7 Smp\n*Status* : Busy",
+        contentText: "*BIOTADA OWNER*\n\n*Nama* : Letta\n*Umur* : 11 Tahun\n*Kelas* : 6 SD\n*Status* : Busy",
         footerText: '⊰💭 Social Media ⊹⊱\n◈ Instagram : @ppiowy_\n◈ Facebook : None\n◈ Discord : #6016\n\n🎮 KannaBot',
         buttons: buttons,
         headerType: 1

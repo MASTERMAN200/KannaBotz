@@ -21,9 +21,10 @@ let handler  = async (m, { conn }) => {
 ❏ *Wa Web Name* : ${conn.browserDescription[0]}
 ❏ *Wa Web Version* : ${conn.browserDescription[2]}
 ❏ *Browser* : ${conn.browserDescription[1]}
+❏ *Platform* : Unbuntu Linux
 ❏ *Uptime Bot* : ${clockString(process.uptime() * 1000)}
 ❏ *Host Number* : @${global.conn.user.jid.split('@')[0]}
-❏ *Bio Bot* : ${ppstatus.status}\n\n*Support/Follow Me*\nhttps://instagram.com/caliph91_`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/error.png'), contextInfo: { mentionedJid: [global.conn.user.jid]}})
+❏ *Bio Bot* : ${ppstatus.status}\n\n*Support/Follow Me*\nhttps://instagram.com/ppiowy_`, quoted: m, sendEphemeral: true, thumbnail: fs.readFileSync('./src/uwu.png'), contextInfo: { mentionedJid: [global.conn.user.jid]}})
 }
 handler.help = ['alive']
 handler.tags = ['main']

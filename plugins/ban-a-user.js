@@ -7,12 +7,11 @@ let handler = async (m, { conn, text }) => {
     let users = global.DATABASE.data.users
     users[who].banned = true
     conn.reply(m.chat, `🌹 Ban User ◉
-✘ Succes banned user ! 
-contact my owner to open banned !\n wa.me/6285712420674?text=kak+buka+banned+aku+dong,+,+,`, m)
+✘ Succes Banned User !`, m)
 }
 handler.help = ['ban']
 handler.tags = ['owner']
-handler.command = /^ban2$/i
+handler.command = /^ban$/i
 handler.rowner = true
 
 module.exports = handler

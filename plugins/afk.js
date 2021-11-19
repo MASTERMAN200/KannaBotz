@@ -4,8 +4,8 @@ let handler = (m, { text }) => {
   user.afkReason = text
   m.reply(`╭ *◇ AFK MODE ◇* ╮
 ├╯ *NOW AFK !*
-├🔖 Name : ${conn.getName(m.sender)}
-├🔖 Alasan : ${text ? '' + text : ''}
+├📇 *Nama* : ${conn.getName(m.sender)}
+├🧾 *Alasan* : ${text ? '' + text : ''}
 ╰╮ © KannaBot 
 `)
 }

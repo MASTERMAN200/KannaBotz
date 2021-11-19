@@ -7,18 +7,16 @@ let handler = async (m, { conn, usedPrefix }) => {
 let user = global.DATABASE.data.users[m.sender]
 let name = conn.getName(m.sender)
 
-let caption = `
-╭──⌠ _*💲 BALANCE*_ ⌡
+let caption = `╭──⌠ _*💲 BALANCE*_ ⌡
 ├ 🔖 _${name} Bank Account 👛_
 ├┮◈
 *│├ 💵 Balance :* ${user.money}
-*│├ 🪙 Koin :* ${user.emas}
+*│├ 🪙 Gold :* ${user.emas}
 *│├ ✨ Exp :* ${user.exp}
-╰┴────────────
-
-Untuk Menukar exp ke money ketik
-${usedPrefix}tukarmoney 100
-`
+*│├ 🎫 Limit :* ${user.limit}
+╰┴──────·····───
+🧪 Untuk Menukar exp ke money ketik
+${usedPrefix}tukarmoney 100`
 
 conn.reply( m.chat, caption, m)
 }

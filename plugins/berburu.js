@@ -27,14 +27,14 @@ let handler = async (m, { conn, usedPrefix, owner }) => {
             let __stamina = (___stamina > 60 ? ___stamina - kucingnya - armornya : ___stamina)
             let stamina = (kucing == 0 && armor == 0 ? pickRandom(['100', '99', '98', '97', '96', '95', '94', '93', '92', '91', '90']) : kucing > 0 && armor > 0 ? __stamina : ___stamina)
             ///HEWAN YG BERHASIL DIBURU\\
-          let sapi = `${Math.floor(Math.random() * 20)}`.trim() 
-        let babi = `${Math.floor(Math.random() * 15)}`.trim() 
-        let ayam = `${Math.floor(Math.random() * 25)}`.trim() 
-        let banteng = `${Math.floor(Math.random() * 30)}`.trim() 
-        let unta = `${Math.floor(Math.random() * 39)}`.trim() 
-        let keledai = `${Math.floor(Math.random() * 44)}`.trim() 
-        let domba = `${Math.floor(Math.random() * 60)}`.trim() 
-        let kambing = `${Math.floor(Math.random() * 50)}`.trim() 
+          let sapi = `${Math.floor(Math.random() * 7)}`.trim() 
+        let babi = `${Math.floor(Math.random() * 5)}`.trim() 
+        let ayam = `${Math.floor(Math.random() * 10)}`.trim() 
+        let banteng = `${Math.floor(Math.random() * 5)}`.trim() 
+        let unta = `${Math.floor(Math.random() * 4)}`.trim() 
+        let keledai = `${Math.floor(Math.random() * 12)}`.trim() 
+        let domba = `${Math.floor(Math.random() * 14)}`.trim() 
+        let kambing = `${Math.floor(Math.random() * 12)}`.trim() 
             ///m.reply(`Sedang Berburu.....`)
            let ber = `Nyawamu yg berkurang *-${healt * 1}* Akibat Diserang hewan ataupun terjatuh
 Stamina mu juga berkurang -${stamina}
@@ -48,7 +48,7 @@ _Hewan yang kamu berhasil diburu:_
 🐪Keledai: ${keledai}
 `.trim()
 setTimeout(() => {
-conn.send2Button( m.chat, ber, `KannaBot`, 'Again', '.berburu', 'inventory', '.inv', m)
+conn.send2Button( m.chat, ber, `${botol}`, 'Again', '.berburu', 'Heal', '.heal', m)
 }, 23000) 
 
                      setTimeout(() => {
@@ -74,9 +74,9 @@ conn.send2Button( m.chat, ber, `KannaBot`, 'Again', '.berburu', 'inventory', '.i
                         global.DATABASE.data.users[m.sender].ayam += ayam * 1
                         global.DATABASE.data.users[m.sender].babi += babi * 1
                         global.DATABASE.data.users[m.sender].lastberbru = new Date * 1
-                         } else conn.sendButton(m.chat, `Anda sudah berburu untuk kelangsungan hidup dan kelelahan silahkan coba *${timers}* lagi`, `Games Rpg Bot`, 'Go back', '.gmenu')
-               } else conn.send2Button(m.chat, `Minimal 50 health♥️ dan 60 stamina untuk bisa berburu`, `Games Rpg`, 'Potion', '.use potion 1','Go back Menu','.gmenu')
-               } else conn.send2Button(m.chat, `Minimal 60 Stamina untuk bisa berburu`, `🎮 Games Rpg`, 'Makan', '.ayamb 2','〨 Back','.simplemenu')
+                         } else conn.sendButton(m.chat, `Anda sudah berburu untuk kelangsungan hidup dan kelelahan silahkan coba 🕓 *${timers}* lagi`, `🎮 Games Rpg`, 'Go back', '.menu')
+               } else conn.send2Button(m.chat, `Minimal 50 health♥️ dan 60 stamina untuk bisa berburu`, `🎮 Games Rpg`, 'Potion', '.use potion 1','Go back Menu','.menu')
+               } else conn.send2Button(m.chat, `Minimal 60 Stamina untuk bisa berburu`, `🎮 Games Rpg`, 'Makan', '.makan ayamb 2','⋮☰ Back','.menu')
                 } catch (e) {
         console.log(e)
         conn.reply(m.chat, 'Error', m)
@@ -93,6 +93,9 @@ handler.tags = ['rpg']
 handler.command = /^(berburu|buru)$/i 
 handler.register = false
 module.exports = handler
+
+let botol = global.botwm
+
 //JANGAN DIUBAH YA YG DIBAWAH
 function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)]

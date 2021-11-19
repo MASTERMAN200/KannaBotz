@@ -1,8 +1,8 @@
 let PhoneNumber = require('awesome-phonenumber')
 let handler = async (m, { conn }) => {
   let pp = './src/avatar_contact.png'
+  let botol = global.botwm
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-  let mentionedJid = [m.sender]
   try {
     pp = await conn.getProfilePicture(who)
   } catch (e) {
@@ -25,8 +25,8 @@ let handler = async (m, { conn }) => {
 ╰─ ✨ *Exp* : ${exp}
 
 `.trim()
-    conn.send2Button(m.chat, str, `🎮 KannaBot`, `🎒 Inventory`, `.inv`, `👤 Profile`, `.profile`, m)
     let mentionedJid = [who]
+    conn.send2ButtonImg(m.chat, str, pp, `${botol}`, `⋮☰ Back`, `.menu`, `👤 Profile`, `.profile`, m, false, { contextInfo: { mentionedJid }})
   }
 }
 handler.help = ['my','dompet']

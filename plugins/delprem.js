@@ -7,7 +7,7 @@ let handler = async (m, { conn, text }) => {
     if (!global.prems.includes(who.split`@`[0])) throw 'dia ngga premium!'
     let index = global.prems.findIndex(v => (v.replace(/[^0-9]/g, '') + '@s.whatsapp.net') === (who.replace(/[^0-9]/g, '') + '@s.whatsapp.net'))
     global.prems.splice(index, 1)
-    conn.reply(m.chat, `@${who.split('@')[0]} sekarang bukan premium!`, m, {
+    conn.reply(m.chat, `╭┦ *Succes ✔️*\n┝▸ 🎋 *Name* : @${who.split('@')[0]}\n╰┦------·····---------\n*⚙️ System* : the owner has revoked the user's premium status !`, m, {
         contextInfo: {
             mentionedJid: [who]
         }

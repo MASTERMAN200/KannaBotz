@@ -9,18 +9,21 @@ handler.before = function (m, { isOwner, isBotAdmin }) {
     let chat = global.DATABASE.data.chats[m.chat]
     let user = global.DATABASE.data.users[m.sender]
     let isBadword = badwordRegex.exec(m.text)
+    let botol = global.botwm
 
     if (!chat.antiBadword && !chat.isBanned && isBadword) {
         user.warning += 1
         this.send2Button(m.chat, `*「Anti Badword」*\n
-🔥 *Dosa* : ${user.warning} / 50
+*▸ Dosa:* ${user.warning} / 50
 
+📖 *Hadist :*
 “Barang siapa yang beriman kepada Allah dan Hari Akhir maka hendaklah dia berkata baik atau diam” (HR. al-Bukhari dan Muslim).
+
 "Whoever believes in God and the Last Day then let him say good or be silent" (HR. al-Bukhari and Muslim).
-`, '©KannaBot', 'Matikan Antibadword', '.disable antibadword', 'Astagfirllah', '.maaf')
+`, `Matikan fitur ini :\n▸ !disable antitoxic\n▸ !disable antibadword\n\n${botol}`, 'Matikan Antibadword', '.disable antitoxic', 'Astagfirllah', '.maaf')
         if (user.warning >= 50) {
             user.banned = true
-         m.reply(`Awokawok masuk Neraka 🗿`)
+         m.reply('Awokawok Gw banned (。-`ω´-)')
        }
     }
     return !0

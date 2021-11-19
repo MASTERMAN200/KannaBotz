@@ -26,13 +26,14 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   global.DATABASE.data.users[m.sender].pancing = global.DATABASE.data.users[m.sender].pancing || 0
   let botol = global.botwm
 
-  let caption = `*💠�Crafting :*
+  let caption = `*💠 Crafting :*
 ⛏️pickaxe
 🗡️Sword
 🎣pancing
 
 *🔮 Enchant*
-⚒️Pickaxe = ${Epickaxe}
+
+⛏️  *Pickaxe = ${Epickaxe}*
 Ketahanan ++
 Nambang ++
 
@@ -55,7 +56,7 @@ Burning fire +
             global.DATABASE.data.users[m.sender].iron -= 5
             global.DATABASE.data.users[m.sender].string -= 20
             global.DATABASE.data.users[m.sender].pickaxe += 1
-            m.reply("Sukses membuat 1 pickaxe")
+            m.reply("Sukses membuat 1 pickaxe 🔨")
             break
           case 'sword':
             if(user.kayu < 10 || user.iron < 5 || user.string < 20) return m.reply(`Barang tidak cukup!\nUntuk membuat sword. Kamu memerlukan : 10 kayu🪵 5 iron⛓️ dan 20 String🕸️`)
@@ -63,7 +64,7 @@ Burning fire +
             global.DATABASE.data.users[m.sender].iron -= 10
             global.DATABASE.data.users[m.sender].string -= 20
             global.DATABASE.data.users[m.sender].sword += 1
-            m.reply("Sukses membuat 1 sword")
+            m.reply("Sukses membuat 1 sword 🗡️")
             break
           case 'pancing':
             if(user.kayu < 10 || user.iron < 5 || user.string < 20) return m.reply(`Barang tidak cukup!\nUntuk membuat pancingan. Kamu memerlukan :\n10 kayu🪵\n5 iron⛓\n20 String🕸️`)
@@ -71,11 +72,11 @@ Burning fire +
             global.DATABASE.data.users[m.sender].iron -= 2
             global.DATABASE.data.users[m.sender].string -= 20
             global.DATABASE.data.users[m.sender].pancing += 1
-            m.reply("Sukses membuat 1 sword")
+            m.reply("Sukses membuat 1 Pancingan 🎣")
             break
 
           default:
-            return conn.sendButton( m.chat, caption, `${botol}`, `Mining`, `.mining`, m)
+            return conn.sendButton( m.chat, caption, `${botol}`, `⋮☰ Back`, `.allmenu`, m)
         }
     } else if (/enchant|enchan/i.test(command)) {
       const count = args[2] && args[2].length > 0 ? Math.min(99999999, Math.max(parseInt(args[2]), 1)) : !args[2] || args.length < 4 ? 1 :Math.min(1, count)
@@ -86,7 +87,7 @@ Burning fire +
           break
 
         default:
-          return conn.sendButton( m.chat, caption, `KannaBot`, `⛏️ Mining`, `.mining`, m)
+          return conn.sendButton( m.chat, caption, `KannaBot`, `⋮☰ Back`, `.allmenu`, m)
       }
     }
   } catch (err) {

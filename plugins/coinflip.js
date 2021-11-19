@@ -28,8 +28,8 @@ let handler = async (m, { conn }) => {
 	await m.reply(res.data.coin);
 };
 handler.help = ["coin", "koin"];
-handler.tags = ["fun"];
+handler.tags = ["fun", " game"]
 
-handler.command = /^((coin|koin)?flip)$/i;
+handler.command = /^((coin|koin)?flip)$/i
 
-module.exports = handler;
+module.exports = handler

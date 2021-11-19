@@ -14,18 +14,18 @@ const buttonMessage = {
     headerType: 1
 }
     if (new Date - global.DATABASE.data.users[m.sender].as > 500000) {
-let randomaku1 = `${Math.floor(Math.random() * 10)}`
-let randomaku2 = `${Math.floor(Math.random() * 10)}`
-let randomaku4 = `${Math.floor(Math.random() * 10)}`
-let randomaku3 = `${Math.floor(Math.random() * 10)}`
-let randomaku5 = `${Math.floor(Math.random() * 10)}`
-let randomaku6 = `${Math.floor(Math.random() * 10)}`
-let randomaku7 = `${Math.floor(Math.random() * 10)}`
-let randomaku8 = `${Math.floor(Math.random() * 10)}`
-let randomaku9 = `${Math.floor(Math.random() * 10)}`
-let randomaku10 = `${Math.floor(Math.random() * 10)}`
-let randomaku11 = `${Math.floor(Math.random() * 10)}`
-let randomaku12 = `${Math.floor(Math.random() * 10)}`
+let randomaku1 = `${Math.floor(Math.random() * 7)}`
+let randomaku2 = `${Math.floor(Math.random() * 7)}`
+let randomaku4 = `${Math.floor(Math.random() * 7)}`
+let randomaku3 = `${Math.floor(Math.random() * 7)}`
+let randomaku5 = `${Math.floor(Math.random() * 7)}`
+let randomaku6 = `${Math.floor(Math.random() * 7)}`
+let randomaku7 = `${Math.floor(Math.random() * 7)}`
+let randomaku8 = `${Math.floor(Math.random() * 7)}`
+let randomaku9 = `${Math.floor(Math.random() * 7)}`
+let randomaku10 = `${Math.floor(Math.random() * 7)}`
+let randomaku11 = `${Math.floor(Math.random() * 7)}`
+let randomaku12 = `${Math.floor(Math.random() * 7)}`
 .trim()
 
 let rbrb1 = (randomaku1 * 1)
@@ -55,7 +55,7 @@ zero11 = `${rbrb11}`
 zero12 = `${rbrb12}`
 
 hsl = `
-*⤷ Hasil Berburu Kali Ini 🐾↵♯❜*
+*▸ Hasil Berburu Kali Ini 🐾*
 
  *🐂 = [ ${zero1} ]*			*🐃 = [ ${zero7} ]*
  *🐅 = [ ${zero2} ]*			 *🐮 = [ ${zero8} ]*
@@ -64,7 +64,7 @@ hsl = `
  *🐼 = [ ${zero5} ]*			 *🐖 = [ ${zero11} ]*
  *🐊= [ ${zero6} ]*			*🐓 = [${zero12} ]*
 
- *©KannaBot*
+ *©KANNABOT*
 `
 global.DATABASE.data.users[m.sender].banteng += rbrb1
 global.DATABASE.data.users[m.sender].harimau += rbrb2
@@ -88,7 +88,7 @@ setTimeout(() => {
                       }, 18000)
                     
                      setTimeout(() => {
-                     m.reply('KETEPAK')
+                     m.reply('DOR DOR')
                      }, 15000) 
                     
                      setTimeout(() => {
@@ -101,9 +101,9 @@ setTimeout(() => {
   user.as = new Date * 1
     } else conn.sendMessage(m.chat, buttonMessage, MessageType.buttonsMessage ,m )
 }
-handler.help = ['']
+handler.help = ['berburu2']
 handler.tags = ['rpg']
-handler.command = /^(skaneidnqincowmpc)$/i
+handler.command = /^(berburu2)$/i
 handler.register = true
 
 module.exports = handler

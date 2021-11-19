@@ -4,7 +4,7 @@ let stc = fs.readFileSync('./sticker/pembohong.webp')
 conn.fakeReply(m.chat, stc, '0@s.whatsapp.net', '*DASAR PEMBOHONG*', 'status@broadcast')
 }
 
-handler.customPrefix = /^(iya|iy|y|ga|gak|engga|tidak|tydak|bener|beneran)$/i
+handler.customPrefix = /^(bener|beneran)$/i
 handler.command = new RegExp
 
 module.exports = handler

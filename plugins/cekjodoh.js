@@ -30,7 +30,7 @@ ${d}
   });
 }
 handler.help = ['cekjodoh <pasangan>']
-handler.tags = ['primbon']
+handler.tags = ['primbon','cek']
 handler.command = /^cekjodoh/i
 handler.owner = false
 handler.mods = false
