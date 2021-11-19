@@ -156,6 +156,7 @@ module.exports = {
             if (!isNumber(user.lastdungeon)) user.lastdungeon = 0
             if (!isNumber(user.lastwar)) user.lastwar = 0
             if (!isNumber(user.lastsda)) user.lastsda = 0
+            if (!isNumber(user.lastberbru)) user.lastberbru = 0
             if (!isNumber(user.lastduel)) user.lastduel = 0
             if (!isNumber(user.lastmining)) user.lastmining = 0
             if (!isNumber(user.lasthunt)) user.lasthunt = 0
@@ -306,7 +307,6 @@ module.exports = {
             job: 'Pengangguran', 
             lbars: '[▒▒▒▒▒▒▒▒▒]', 
             role: 'Newbie ㋡', 
-            autolevelup: true,
         }
 
         let chat = global.DATABASE._data.chats[m.chat]
@@ -353,10 +353,10 @@ let settings = global.DATABASE.data.settings
           if (!'anticall' in settings) settings.anticall = true
           if (!'antispam' in settings) settings.antispam = true
           if (!'antitroli' in settings) settings.antitroli = true
-          if (!'backup' in settings) settings.backup = false
+          if (!'backup' in settings) settings.backup = true
           if (!isNumber(settings.backupDB)) settings.backupDB = 0
           if (!'groupOnly' in settings) settings.groupOnly = false
-          if (!'jadibot' in settings) settings.groupOnly = false
+          if (!'jadibot' in settings) settings.jadibot = true
           if (!'nsfw' in settings) settings.nsfw = true
           if (!isNumber(settings.status)) settings.status = 0
         } else global.DATABASE.data.settings = {
@@ -365,7 +365,7 @@ let settings = global.DATABASE.data.settings
           anticall: true,
           antispam: true,
           antitroli: true,
-          backup: false,
+          backup: true,
           backupDB: 0,
           groupOnly: false,
           jadibot: true,
@@ -619,18 +619,18 @@ let settings = global.DATABASE.data.settings
         if (chat.welcome) {
           let groupMetadata = await this.groupMetadata(jid)
           for (let user of participants) {
-            let pp = 'https://i.postimg.cc/jjz8YvZj/d0f8b804a908ce4aaee63d54035d2192.jpg'
-            let ppgc = 'https://i.ibb.co/jr9Nh6Q/Thumb.jpg'
+            let pp = 'https://telegra.ph/file/1008f78b2bc8ad3314964.jpg'
+            let bkrd = 'https://telegra.ph/file/904bfcda198cec4df3185.jpg'
             try {
               pp = await uploadImage(await (await fetch(await this.getProfilePicture(user))).buffer())
               ppgc = await uploadImage(await (await fetch(await this.getProfilePicture(jid))).buffer())
             } catch (e) {
             } finally {
               text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Selamat datang, @user!').replace('@subject', this.getName(jid)).replace('@desc', groupMetadata.desc) :
-                (chat.sBye || this.bye || conn.bye || 'Sampai jumpa, @user!')).replace('@user', '@' + user.split`@`[0])
-              let wel = `https://hardianto-chan.herokuapp.com/api/tools/welcomer2?name=${encodeURIComponent(this.getName(user))}&descriminator=${user.split(`@`)[0].substr(-5)}&totalmem=${encodeURIComponent(groupMetadata.participants.length)}&namegb=${encodeURIComponent(this.getName(jid))}&ppuser=${pp}&background=https://i.ibb.co/KhtRxwZ/dark.png&apikey=hardianto`
-              let lea = `https://hardianto-chan.herokuapp.com/api/tools/leave2?name=${encodeURIComponent(this.getName(user))}&descriminator=${user.split(`@`)[0].substr(-5)}&totalmem=${encodeURIComponent(groupMetadata.participants.length)}&namegb=${encodeURIComponent(this.getName(jid))}&ppuser=${pp}&background=https://i.ibb.co/KhtRxwZ/dark.png&apikey=hardianto`
-
+                (chat.sBye || this.bye || conn.bye || '*—「 GOOD BYE 」—*\nDadah @user !')).replace('@user', '@' + user.split`@`[0])
+              let wel = `https://api.dhamzxploit.my.id/api/canvas/welcome?pp=${pp}&name=${encodeURIComponent(this.getName(user))}&bg=${bkrd}&grupname=${encodeURIComponent(this.getName(jid))}&member=${encodeURIComponent(groupMetadata.participants.length)}`
+              let lea = `https://api.dhamzxploit.my.id/api/canvas/goodbye?pp=${pp}&name=${encodeURIComponent(this.getName(user))}&bg=${bkrd}&member=${encodeURIComponent(groupMetadata.participants.leght)}`
+                 
               this.sendFile(jid, action === 'add' ? wel : lea, 'pp.jpg', text, null, false, {
                 contextInfo: {
                   mentionedJid: [user]
@@ -657,14 +657,14 @@ let settings = global.DATABASE.data.settings
     if (m.key.fromMe) return
     let chat = global.DATABASE.data.chats[m.key.remoteJid]
     if (chat.delete) return
-    await this.sendButton(m.key.remoteJid, `*「⚠️Anti Delete ⚠」*
+    await this.send2Button(m.key.remoteJid, `*「⚠️Anti Delete ⚠」*
 *📢 Terdeteksi Penghapusan Pesan !*
 *🔖 Nama :* @${m.participant.split`@`[0]}
 *🔖 Type*: ${Object.keys(m.message.message)[0]}
 *🔖 Number*: ${require('awesome-phonenumber')(`+${m.participant.split`@`[0]}`).getNumber('international')}
 
 klick untuk mematikannya atau ketik #disable delete
-`.trim(), '', '⚙️ DISABLE DELETE', '.disable delete', {
+`.trim(), '', '▸ DISABLE DELETE', '.disable delete', '▸ DISABLE ANTIDELETE', '.disable antidelete', {
       quoted: m.message,
       contextInfo: {
         mentionedJid: [m.participant]
@@ -698,7 +698,7 @@ global.dfail = (type, m, conn) => {
     private: '*[❗] Private Only*',
     admin: '*[❗] Admin Group Only*',
     botAdmin: '*[❗] Bot Admin Only*',
-    unreg: ' *── 「 NOT REGISTERED 」 ──* \nHalo Kak !\n Yuk Daftar Dulu Karena Anda Belum Terdaftar Dalam Database Bot\n\n📍 Katik : #daftar nama.umur\n◈ Contoh : #daftar kanna.9',
+    unreg: ' *── 「 NOT REGISTERED 」 ──* \nHalo Kak !\n Yuk Daftar Dulu Karena Anda Belum Terdaftar Dalam Database Bot\n\n📍 Ketik : #daftar nama.umur\n◈ Contoh : #daftar kanna.9',
     nsfw: '[❗] Nsfw Not Active'
   }[type]
   if (msg) return m.reply(msg)
