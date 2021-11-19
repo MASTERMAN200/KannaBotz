@@ -7,7 +7,7 @@ return Math.floor(Math.random() * url)
 }
 handler.help = ['lolivid']
 handler.tags = ['video']
-handler.command = /^(lolivid)$/i
+handler.command = /^(lolivid|videololi|lolimp4)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false

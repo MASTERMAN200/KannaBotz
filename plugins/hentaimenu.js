@@ -1,30 +1,30 @@
 let handler = async (m, { conn }) =>
 conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
-                        "title": "Nsfw Menu Bree",
-                        "description": "©Nsfw By Fernazer",
-                        "buttonText": "Menu disini Bree",
+                        "title": "🔞❜♯'›⤷ NsfwMenu ⛓",
+                        "description": "©KannaBot",
+                        "buttonText": "Click Here",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                                 "rows": [
                                     {
-                                        "title": `Random NsfwNeko`,
+                                        "title": `🔞 Random NsfwNeko`,
                                         "rowId": ".nsfwneko"
                                     }, {
-                                       "title": `Random Hentai Gif`,
+                                       "title": `🔞 Random Hentai Gif`,
                                        "rowId": ".hentaigif"
                                     }, {
-                                       "title": `Random Hentai`,
+                                       "title": `🔞 Random Hentai`,
                                        "rowId": ".hentai"
                                     }, {
-                                       "title": `Random Pussy`,
+                                       "title": `🔞 Random Pussy`,
                                         "rowId": ".pussy"
                                     }, {
-                                        "title": `Random Ass`,
+                                        "title": `🔞 Random Ass`,
                                         "rowId": ".ass"                               
                                     }, { 
-                                        "title": `Random Manga`,
+                                        "title": `🔞 Random Manga`,
                                         "rowId": ".manga"
                                     }
                                 ]

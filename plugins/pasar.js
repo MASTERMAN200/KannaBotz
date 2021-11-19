@@ -29,30 +29,32 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
     let _type = (args[1] || '').toLowerCase()
     let jualbeli = (args[0] || '').toLowerCase()
     const Kchat = `━━━━━━━━━━━━━━━━━
-*Barang   | Harga Jual*\n━━━━━━━━━━━━━━━━━\n
-Kepiting:     ${Skepiting}
-Lobster:     ${Slobster}
-Udang:     ${Sudang}
-Cumi:     ${Scumi}
-Gurita:     ${Sgurita}
-Buntal:     ${Sbuntal}
-Dory:     ${Sdory}
-Orca:     ${Sorca}
-Lumba:     ${Slumba}
-Paus:     ${Spaus}
-Hiu:     ${Spaus}
-Banteng:     ${Sbanteng}
-Harimau:     ${Sharimau}
-Gajah:     ${Sgajah}
-Kambing:     ${Skambing}
-Panda:      ${Spanda}
-Kerbau:     ${Skerbau}
-Buaya:     ${Sbuaya}
-Sapi:     ${Ssapi}
-Monyet:     ${Smonyet}
-Babi Hutan:     ${Sbabihutan}
-Babi:     ${Sbabi}
-Ayam:     ${Sayam}\n━━━━━━━━━━━━━━━━━\n━━━━━━━━━━━━━━━━━
+*🌱 Hewan   | 💲 Harga Jual*\n━━━━━━━━━━━━━━━━━\n
+🦀 Kepiting:      ${Skepiting}
+🦞 Lobster:       ${Slobster}
+🦐 Udang:         ${Sudang}
+🦑 Cumi:           ${Scumi}
+🐙 Gurita:         ${Sgurita}
+🐡 Buntal:         ${Sbuntal}
+🐠 Dory:            ${Sdory}
+🐳 Orca:            ${Sorca}
+🐬 Lumba:        ${Slumba}
+🐋 Paus:           ${Spaus}
+🦈 Hiu:              ${Shiu}
+🐃 Banteng:      ${Sbanteng}
+🐅 Harimau:      ${Sharimau}
+🐘 Gajah:           ${Sgajah}
+🐐 Kambing:     ${Skambing}
+🐼 Panda:         ${Spanda}
+🐃 Kerbau:        ${Skerbau}
+🐊 Buaya:         ${Sbuaya}
+🐂 Sapi:            ${Ssapi}
+🐒 Monyet:       ${Smonyet}
+🐗 Babi Hutan: ${Sbabihutan}
+🐖 Babi:             ${Sbabi}
+🐔 Ayam:           ${Sayam}\n━━━━━━━━━━━━━━━━━\n━━━━━━━━━━━━━━━━━
+🧪 *Contoh penggunaan :*
+#pasar sell ayam
 `.trim()
     try {
         if (/pasar|toko/i.test(command)) {
@@ -62,9 +64,9 @@ Ayam:     ${Sayam}\n━━━━━━━━━━━━━━━━━\n━━�
            /* case 'buy':
                 switch (_type) {
                     case 'potion':
-                            if (global.DATABASE.data.users[m.sender].money >= potion * count) {
-                                global.DATABASE.data.users[m.sender].money -= potion * count
-                                global.DATABASE.data.users[m.sender].potion += count * 1
+                            if (global.DATABASE.data.users[m.sender].kepiting >= count * count) {
+                                global.DATABASE.data.users[m.sender].kepiting >= count * count
+                                global.DATABASE.data.users[m.sender].kepiting >= count * 1
                                 conn.reply(m.chat, `Sukses Membeli ${count} Potion Dengan Harga ${potion * count} money\n\nGunakan Potion Dengan Ketik: *${usedPrefix}use potion <jumlah>*`, m)
                             } else conn.reply(m.chat, `Uang Anda Tidak Cukup Untuk Membeli ${count} Potion Dengan Harga ${potion * count} Money `,)
                         break
@@ -333,8 +335,8 @@ Ayam:     ${Sayam}\n━━━━━━━━━━━━━━━━━\n━━�
     }
 }
 
-handler.help = ['shop <sell|buy> <args>', 'toko <sell|buy> <args>']
+handler.help = ['pasar <sell|buy>']
 handler.tags = ['rpg']
     
-handler.command = /^(pasar|toko|buy|beli|sell|jual)$/i
+handler.command = /^pasar$/i
 module.exports = handler

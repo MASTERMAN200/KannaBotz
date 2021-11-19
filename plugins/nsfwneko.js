@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
    response = args.join(' ')
   if (!args) throw 'Masukkan Parameter'
   m.reply('Sedang Diproses...')
-  let res = `https://api.xteam.xyz/randomimage/nsfwneko?apikey=MIMINETBOT`
+  let res = `https://hardianto-chan.herokuapp.com/api/anime/random?nsfw=neko&apikey=hardianto`
   conn.sendFile(m.chat, res, 'nsfwneko.jpg', `wangy wangy wangy`, m, false)
 }
 handler.help = ['nsfwneko'].map(v => v + ' ')

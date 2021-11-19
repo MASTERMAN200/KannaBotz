@@ -1,7 +1,7 @@
 let handler = function (m) {
   // this.sendContact(m.chat, '6283144570377', 'Raku Gans', m)
-  conn.sendContact(m.chat, '62895704368804' , 'Komtol canss', m)
-  conn.reply(m.chat, `Tuh Pacar Ku Jangan Galak² Ya >_<, Nanti Ku Banned Nanges`, m) 
+  conn.sendContact(m.chat, '6285709690319' , '(≧▽≦)', m)
+  conn.reply(m.chat, `Tuh Pacar Ku Jangan Galak² Ya >-<, Nanti Ku Banned Nanges`, m) 
 }
 handler.help = ['pacarowner']
 handler.tags = ['info']

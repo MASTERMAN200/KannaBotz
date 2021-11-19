@@ -9,9 +9,9 @@ const defaultMenu = {
 🐾 Hyyie , , !
 Im %me !
 
-📇 UserName : %name
-⏱️ Uptime : %uptime
-📃 Total Features : 1050++
+📇 *UserName* : %name
+⏱️ *Uptime* : %uptime
+📃 *Total Features* : 1050++
 
 %readmore
 `.trimStart(),
@@ -63,6 +63,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
+    let botol = global.botwm
     let totalreg = Object.keys(global.DATABASE.data.users).length
     let rtotalreg = Object.values(global.DATABASE.data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
@@ -120,7 +121,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     // conn.reply(m.chat, text.trim(), m)
-   conn.send2Button(m.chat, text.trim(), '🎮 KannaBot', '〨 Menu', '.simplemenu', '🐾 Owner', '.owner')
+   conn.send2Button(m.chat, text.trim(), `${botol}`, '⋮☰ Menu', '.menu', '🐾 Owner', '.owner')
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e

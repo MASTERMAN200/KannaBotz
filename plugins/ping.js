@@ -1,13 +1,15 @@
 let { performance } = require('perf_hooks')
 let handler = async (m, { conn }) => {
   let old = performance.now()
-  await m.reply('_Testing speed..._')
+  await m.reply('_⚡ Testing speed..._')
   let neww = performance.now()
-  await conn.send2Button(m.chat, neww - old + 'ms', 'made by Fernazer', 'OK SIP', 'yoi', 'LANCAR', 'manteps', { quoted: m })
+  await conn.send2Button(m.chat, neww - old + 'ms', `${botol}`, '⋮☰ BACK', '.menu', 'ϟ BOOST', '.boost', { quoted: m })
   
 }
-handler.help = ['ping', 'speed']
+handler.help = ['ping']
 handler.tags = ['info', 'tools']
 
-handler.command = /^(ping|speed)$/i
+handler.command = /^(ping)$/i
 module.exports = handler
+
+let botol = global.botwm

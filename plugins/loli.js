@@ -1,14 +1,14 @@
 let fetch = require('node-fetch')
-let handler = async (m, { conn, args }) => {
-   response = args.join(' ')
-  if (!args) throw 'Masukkan Parameter'
-  m.reply('Sedang Diproses...')
-  let res = `https://recoders-area.caliph.repl.co/api/loli?apikey=FreeApi`
-  conn.sendFile(m.chat, res, 'loli.jpg', `wangy wangy wangy`, m, false)
-}
-handler.help = ['loli'].map(v => v + ' ')
-handler.tags = ['anime']
+let handler = async(m, { conn }) => {
+  let res = await fetch(global.API('botstyle', '/api/loli', {}, 'apikey'))
 
-handler.command = /^(loli)$/i
+  if (!res.ok) throw await res.text()
+  let json = await res.json()
+  if (!json.result) throw 'Error!'
+  conn.sendFile(m.chat, json.result, '', 'Kyaa ! Kawaii ! >-<', m)
+}
+handler.help = ['loli2']
+handler.tags = ['anime']
+handler.command = /^(loli2)$/i
 
 module.exports = handler

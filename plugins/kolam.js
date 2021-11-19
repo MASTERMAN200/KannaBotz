@@ -14,26 +14,26 @@ let ikan = global.DATABASE.data.users[m.sender].ikan
 let orca = global.DATABASE.data.users[m.sender].orca
 
 let zer =`
-*《 KOLAM MU 》*
+*◈ KOLAM 🏝️↵♯❜*
 
-*➡️   ️ 🦀 = [ ${kepiting} ] Ekor Kepiting*
-*➡️   ️ 🦞 = [ ${lobster} ] Ekor Lobster*
-*➡️   ️ 🦐 = [ ${udang} ] Ekor Udang*
-*➡️   ️ 🦑 = [ ${cumi} ] Ekor Cumi*
-*➡️   ️ 🐙 = [ ${gurita} ] Ekor Gurita*
-*➡️   ️ 🐡 = [ ${buntal} ] Ekor Buntal*
-*➡️   ️ 🐠 = [ ${dory} ] Ekor Dory*
-*➡️   ️ 🐟 = [ ${orca} ] Ekor Orca*
-*➡️   ️ 🐬 = [ ${lumba} ] Ekor Lumba* 
-*➡️   ️ 🐳 = [ ${paus} ] Ekor Paus*
-*➡️   ️ 🦈 = [ ${hiu} ] Ekor Hiu*
+*♯⤷   ️ 🦀 = [ ${kepiting} ] Ekor Kepiting*
+*♯⤷   ️ 🦞 = [ ${lobster} ] Ekor Lobster*
+*♯⤷   ️ 🦐 = [ ${udang} ] Ekor Udang*
+*♯⤷   ️ 🦑 = [ ${cumi} ] Ekor Cumi*
+*♯⤷   ️ 🐙 = [ ${gurita} ] Ekor Gurita*
+*♯⤷   ️ 🐡 = [ ${buntal} ] Ekor Buntal*
+*♯⤷   ️ 🐠 = [ ${dory} ] Ekor Dory*
+*♯⤷   ️ 🐟 = [ ${orca} ] Ekor Orca*
+*♯⤷   ️ 🐬 = [ ${lumba} ] Ekor Lumba* 
+*♯⤷   ️ 🐳 = [ ${paus} ] Ekor Paus*
+*♯⤷   ️ 🦈 = [ ${hiu} ] Ekor Hiu*
 
- *FERNAZER*    
+©KannaBot
  `.trim()
      conn.reply(m.chat, zer, m)
 } 
 handler.help = ['kolam']
-handler.customPrefix = ['kolam']
+handler.customPrefix = ['Kolam 🏝️']
 handler.command = new RegExp
 handler.register = true
 

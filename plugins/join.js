@@ -25,12 +25,15 @@ let handler = async (m, { conn, text, usedPrefix, participants, groupMetadata })
      conn.reply(res.gid, `Hallo Member Grup\n*${grup}*\nAku telah ditambahkan oleh *${joiner}*\n\nKetik ${usedPrefix}menu untuk memulai Bot yaa`)
  }
 }
-handler.help = ['join <link gc>']
-handler.tags = ['info']
-handler.command = /^(join)$/i
+handler.help = ['join <link gc> <dinonaktifkan>']
+handler.tags = ['premium']
+handler.command = /^(ckakcpqncoapmfowpxjabov)$/i
 
 handler.premium = true
 handler.owner = false
 handler.private = true
+handler.mods = false
+
+handler.fail = null
 
 module.exports = handler

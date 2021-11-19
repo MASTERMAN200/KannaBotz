@@ -1,4 +1,6 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
+let botol = global.botwm
+let pp = 'https://telegra.ph/file/c9e24b7687af41f995426.jpg'
 let str = `
 ╭═══ *〘 SEWA 〙*
 ║ ┅ ๑————————————๑
@@ -6,7 +8,8 @@ let str = `
 ║┊ ⌲ Sewa = _5k/grup (2 minggu)_
 ║┊ ⌲ Sewa = _10k/grup (1 bulan)_
 ║┊ ⌲ Sewa = _15k/grup (2 bulan)_
-║┊ ⌲ Sewa = _20k/grup (12 bulan)_
+║┊ ⌲ Sewa = _25/grup (8 bulan)_
+║┊ ⌲ Sewa = _35k/grup (12 bulan)_
 ╰═ ┅ ═══════
 
 ╭═══ *〘 Via 〙*
@@ -36,7 +39,7 @@ _https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT_
 Ingin Jadi Bot Seperti ini?
 ketik #jadibot
 `.trim()
-conn.sendButton(m.chat,str, `🎮 KannaBot`, `🐾 Owner`, `.owner`, m)
+conn.sendButtonImg(m.chat,str,pp, `${botol}`, `🐾 Owner`, `.owner`, m)
 }
 handler.help = ['sewabot','sewa']
 handler.tags = ['main']

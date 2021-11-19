@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
      let handler  = async (m, { conn, args, text }) => {
      if (!text) throw 'Cari Apa ?'
  if (text) m.reply('Searching.....')
-    heum = await require('../lib/scraper').pinterest(text)
+    heum = await require('../lib/scrape').pinterest(text)
     json = await heum
     random = json.result[Math.floor(Math.random() * json.result.length)]
     if (json.result.length == 0) return conn.sendFile(m.chat, './src/error.png', 'error not found', 'ERROR 404 NOT FOUND', m)

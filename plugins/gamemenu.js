@@ -25,6 +25,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 │✎ ${usedPrefix}family100
 │✎ ${usedPrefix}gantengcek (limit)
 │✎ ${usedPrefix}gaycek (limit)
+│✎ ${usedPrefix}koboy
 │✎ ${usedPrefix}iqtest
 │✎ ${usedPrefix}kuis
 │✎ ${usedPrefix}math <mode>

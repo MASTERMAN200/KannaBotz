@@ -1,19 +1,8 @@
-let fetch = require('node-fetch')
-     let handler  = async (m, { conn, args }) => {
-   conn.sendMessage(m.chat, 'https://api.lolhuman.xyz/api/random/sagiri?apikey=ohayou', '', '', m, false)
+let handler = async (m, { conn }) => {
+  conn.sendFile(m.chat, 'https://api.lolhuman.xyz/api/random/sagiri?apikey=ed78c137a46873c5b8e5fe3b', '', '', m)
 }
 handler.help = ['sagiri']
-handler.tags = ['wibu']
-handler.command = /^sagiri$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
+handler.tags = ['anime']
+handler.command = /^(sagiri)$/i
 
 module.exports = handler

@@ -1,12 +1,12 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-let info = `
-*SC Ini Menggunakan Termux*
-Mau Lihat Sc Nya? Pilih Di Bawah Kak
-_Password Ada Di Video_
-_Jika Tidak Menemukannya Bisa Chat_
-_wa.me/6281328139682_
+let info = `*〧 Script BotWa 🎋‷*
+
+◈
+┝▸ 🐾 *Script :* https://github.com/nurutomo/wabot-aq
+┝▸ 🔥 *RestApi :* https://restapi-kannabot.herokuapp.com/
+╰⋆
 `.trim()
-await conn.send2Button(m.chat, info, 'made by Fernazer', 'VIA YT', '.chadmin', 'VIA GITHUB', '.github', { quoted: m })
+await conn.send2Button(m.chat, info, `${botol}`, '⋮☰ Back', '.menu', 'Tutorial', '.cbb', { quoted: m })
 }
 handler.help = ['sc']
 handler.tags = ['tutor']
@@ -21,7 +21,8 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = 20
+handler.limit = false
 
 module.exports = handler
- 
+
+let botol = global.botwm

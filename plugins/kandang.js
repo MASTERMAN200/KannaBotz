@@ -14,27 +14,27 @@ let sapi = global.DATABASE.data.users[m.sender].sapi
  let ayam = global.DATABASE.data.users[m.sender].ayam
 
 let zer = `
-*《 KANDANG MU 》*
+*⤷ KANDANG 🐾 ↵♯❜*
     
- *➡️   ️ 🐂 = [ ${banteng} ] Ekor Banteng*
- *➡️   ️ 🐅 = [ ${harimau} ] Ekor Harimau*
- *➡️   ️ 🐘 = [ ${gajah} ] Ekor Gajah*
- *➡️   ️ 🐐 = [ ${kambing} ] Ekor Kambing*
- *➡️   ️ 🐼 = [ ${panda} ] Ekor Panda*
- *➡️   ️ 🐊 = [ ${buaya} ] Ekor Buaya*
- *➡️   ️ 🐃 = [ ${kerbau} ] Ekor Kerbau*
- *➡️   ️ 🐮 = [ ${sapi} ] Ekor Sapi*
- *➡️   ️ 🐒 = [ ${monyet} ] Ekor Monyet*
- *➡️   ️ 🐗 = [ ${babihutan} ] Ekor Babi Hutan*
- *➡️   ️ 🐖 = [ ${babi} ] Ekor Babi*
- *➡️   ️ 🐓 = [ ${ayam} ] Ekor Ayam*
+ *♯⤷   ️ 🐂 = [ ${banteng} ] Ekor Banteng*
+ *♯⤷   ️ 🐅 = [ ${harimau} ] Ekor Harimau*
+ *♯⤷   ️ 🐘 = [ ${gajah} ] Ekor Gajah*
+ *♯⤷   ️ 🐐 = [ ${kambing} ] Ekor Kambing*
+ *♯⤷   ️ 🐼 = [ ${panda} ] Ekor Panda*
+ *♯⤷   ️ 🐊 = [ ${buaya} ] Ekor Buaya*
+ *♯⤷   ️ 🐃 = [ ${kerbau} ] Ekor Kerbau*
+ *♯⤷   ️ 🐮 = [ ${sapi} ] Ekor Sapi*
+ *♯⤷   ️ 🐒 = [ ${monyet} ] Ekor Monyet*
+ *♯⤷   ️ 🐗 = [ ${babihutan} ] Ekor Babi Hutan*
+ *♯⤷   ️ 🐖 = [ ${babi} ] Ekor Babi*
+ *♯⤷   ️ 🐓 = [ ${ayam} ] Ekor Ayam*
  
- *FERNAZER*    
+©KannaBot
  `.trim()
      conn.reply(m.chat, zer, m)
 } 
 handler.help = ['kandang']
-handler.customPrefix = ['kandang']
+handler.customPrefix = ['Kandang 🐾']
 handler.command = new RegExp
 handler.register = true
 

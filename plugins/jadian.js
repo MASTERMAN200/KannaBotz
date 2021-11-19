@@ -14,8 +14,10 @@ function handler(m, { groupMetadata }) {
     })
 conn.reply(m.reply, 'Cie Jodoh Nih Nikah Trs Buat Anak Sana:)', m)
 } 
-handler.help = ['jodohin']
-handler.tags = ['panik']
-handler.command = ['jodohin']
+handler.help = ['jodohin','jadian']
+handler.tags = ['fun','jdh']
+handler.command = /^jodoh(in|kan)|jadian$/i
+
+handler.group = true
 
 module.exports = handler
