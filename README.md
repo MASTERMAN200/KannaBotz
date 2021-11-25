@@ -12,6 +12,11 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kannachann/KannaBotz)
 
+## ```INFO```
+Ini harus pake node_module !
+node_module? cari sendiri !
+
+
 ## Join Group Bot
 [`Group Whatsapp`](https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT)
 ### FOR TERMUX USER
@@ -19,7 +24,7 @@
 > pkg update && pkg upgrade
 > pkg install git -y
 > pkg install nodejs -y
-> pkg install ffmpeg -y
+>  install ffmpeg -y
 > pkg install imagemagick -y
 > git clone https://github.com/Kannachann/KannaBotz
 > cd KannaBotz
