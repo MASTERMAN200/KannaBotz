@@ -14,7 +14,7 @@
 
 ## ```INFO```
 Ini harus pake node_module !
-node_module? cari sendiri !
+• node_module? cari sendiri !
 
 
 ## Join Group Bot
