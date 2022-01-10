@@ -1,11 +1,11 @@
 global.DeveloperMode = 'false' //Buat Mode True False Moderator
-global.linkGC = ['https://chat.whatsapp.com/Hjr3H7l9iC8F2deP0cv6GT']
+global.linkGC = ['']
 global.channelYT = ['ZEEONE OFC'] 
-global.owner = ['6285712420674','6283143393763','6288217277973','62831433937630','6285704954639']// Nomer Owner Utama
-global.mods = ['6283143393763'] // Buat Owner Biar Unlimitid
-global.prems = ['6281357620824'] // Buat Yg User Premium 
+global.owner = ['6289625556161'] // Nomer Owner Utama
+global.mods = [''] // Buat Owner Biar Unlimitid
+global.prems = [''] // Buat Yg User Premium 
 
-global.botwm = '🎮 Ƙαɴɴα вσт '//UBAH JADI NAMAMU
+global.botwm = 'BOT WANGSAF V5 '//UBAH JADI NAMAMU
 global.wait = '*[❗] Wait. . .*'
 global.progses = '*[❗] Loading. . .*'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
@@ -44,8 +44,8 @@ global.APIKeys = { // APIKey Bree Isi Di Sini
 }
 
 // Sticker WM
-global.packname = '🍀 • Sticker By :\n⤷ καɴɴαвσтᴢ ɞ \n\n🔖 • By :\n⤷ίℓʋɭų ǫғғιcιαℓ あ'
-global.author = '🇯🇵 • Number Bot :\n⤷ wa.me/6283143393763\n\n🎮 • Discord :\n⤷ https://discord.gg/WEJQjugTY7'
+global.packname = '🍀 • Sticker By :\n Bot Wangsaff V5'
+global.author = '🇯🇵 • Number Bot :\n wa.me/62896255561617'
 
 global.multiplier = 9 // The higher, The harder levelup
 
